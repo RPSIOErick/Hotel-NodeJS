@@ -1,0 +1,382 @@
+/* Container de Reservar */
+#ContainerReservar
+{
+    margin: auto;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+}
+
+    /* Lado esquerdo do container Reservar */
+    #ReservarInfo
+    {
+        right: 0;
+        min-width: 100%;
+    }
+
+        /* Imagem do Quarto */
+        #ImagemQuarto
+        {
+            width: 40vw;
+            height: auto;
+            position: relative;
+            top: 5%;
+            left: 50%;
+            transform: translate(-50%);
+            margin-top: 3vw;
+        }
+
+        /* Nome do Quarto */
+        #NomeQuarto
+        {
+            font-weight: bold;
+            text-align: center;
+            position: relative;
+            margin-bottom: -1vw;
+            margin-top: 3vw;
+            margin-bottom: 1vw;
+            font-size: 1.7vw;
+        }
+
+            /* Pequeno abaixo do nome do Quarto */
+            #BrevePropaganda
+            {
+                font-size: 1.3vw;
+                text-align: center;
+                position: relative;
+                top: 1vw;
+            }
+
+        /* Detalhes do Quarto - Título */
+        #DetalhesQuarto
+        {
+            font-weight: 700;
+            font-size: 1.5vw;
+            width: fit-content;
+            position: relative;
+            left: 4.7vw;
+            top: 4vw;
+        }
+
+        /* Parágrafo para os detalhes do quarto */
+        #DetalhesQuarto-P
+        {
+            font-weight: 400;
+            font-size: 1.2vw;
+            position: relative;
+            left: 4.7vw;
+            top: 5vw;
+        }
+
+    /* Lado direto do container Reservar */
+    #ReservarReserva
+    {
+        position: relative;
+        right: 0;
+        min-width: 100%;
+        padding-top: 2.5vw;
+        font-size: 2vw;
+        margin-top: 3vw;
+    }
+
+        /* Título da coluna para realizar reserva */
+        #ReservarReserva h2
+        {
+            text-align: center;
+        }
+
+        /* Marca páginas vermelho (Bandeirinha) */
+        #Marcador
+        {
+            position: relative;
+            right: 3vw;
+            bottom: 0.7vw;
+        }
+
+        /* Formulário para Reserva */
+        #ReservarForm
+        {
+            background-color: #F3F3F3;
+            margin-right: 1vw;
+            padding: 1vw;
+            font-size: 1.5vw;
+            z-index: 4;
+        }
+
+            /* Inputs do Tipo DATE no grupo "datas" do formulário */
+            #datas input[type="date"] {
+                border: none;
+                border-bottom: 0.2vw solid #000000;
+                outline: none;
+                background-color: transparent;
+                font-size: 1.5vw;
+            }
+            
+            /* Inputs do Tipo TEXT no grupo "datas" do formulário */
+            #datas input[type="text"]
+            {
+                border: none;
+                border-bottom: 0.2vw solid #000000;
+                outline: none;
+                background-color: transparent;
+                font-size: 1.5vw;
+                width: 11.5vw;
+            }
+
+            /* Form Group: Quantidade Pessoas */
+            #qntdPessoas
+            {
+                position: relative;
+                margin-top: 4vw;
+            }
+
+                /* Inputs do Tipo NUMBER no grupo "qntdPessoas" do formulário */
+                #qntdPessoas input[type="number"]
+                {
+                    border: none;
+                    border-bottom: 0.2vw solid #000000;
+                    outline: none;
+                    background-color: transparent;
+                    font-size: 1.5vw;
+                    width: 13.5vw;
+                }
+
+            /* Form Group: Observações */
+            #observacoes
+            {
+                position: relative;
+                margin-top: 2vw;
+            }
+
+                /* Inputs do Tipo TEXTAREA no grupo "observacoes" do formulário */
+                #observacoes textarea
+                {
+                    border: 0.1vw solid black;
+                    border-radius: 1vw;
+                    padding: 1vw;
+                    font-size: 1.5vw;
+                    margin-top: 0vw;
+                    max-width: 46   vw;
+                    min-width: 46vw;
+                }
+
+            /* Etiqueta de Confirmação */
+            #Confirmacao
+            {
+                background: linear-gradient(0.25turn, #809AAB, #343E45);
+                border-radius: 1vw;
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+                color: white;
+                position: relative;
+                bottom: -1vw;
+                right: 5vw;
+                font-size: 1.5vw;
+            }
+
+                /* Botão de Confirmação */
+                #Confirmação button
+                {
+                    background-color: transparent;
+                    border: 0.2vw solid white;
+                }
+
+
+        /* Omissão das quebras de linha mobile */
+        #MobileBreak
+        {
+            display: none;
+        }
+
+/* Responsividade para telas em modo retrato */
+@media screen and (orientation: portrait)
+{
+    /* Remoção das Colunas (Mobile) */
+    #ContainerReservar
+    {
+        grid-template-columns: none;
+    }
+
+    /* Exibição das Quebras de Linha (Mobile) */
+    #MobileBreak
+    {
+        display: block;
+    }
+
+    /* Imagem do Quarto (Mobile) */
+    #ImagemQuarto
+    {
+        position: relative;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: auto;
+        margin-bottom: 12vw;
+    }
+
+    /* Nome do Quarto */
+    #NomeQuarto
+    {
+        position: relative;
+        font-size: 2.7vh;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: -5vh;
+    }
+
+        /* Pequeno abaixo do nome do Quarto */
+        #BrevePropaganda
+        {
+            top: 1.5vh;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2vh;
+            
+        }
+
+        /* Detalhes do Quarto - Título */
+        #DetalhesQuarto
+        {
+            font-weight: 700;
+            font-size: 2.5vh;
+            position: relative;
+            left: 4.7vw;
+            
+        }
+
+        /* Detalhes do Quarto */
+        #DetalhesQuarto-P
+        {
+            font-weight: 400;
+            font-size: 2.2vh;
+            position: relative;
+            left: 4.7vw;
+        }
+
+
+    /* Etiqueta da Confirmação (Mobile) */
+    #Confirmacao
+    {
+        display: block;
+        position: relative;
+        width: 60%;
+        font-size: 3vh;
+        padding-bottom: 5vh;
+        border: 0.1vw solid black;
+        border-top-left-radius: 1vw;
+        border-top-right-radius: 1vw;
+        position: relative;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    /* Marca Páginas Vermelho (Mobile) */
+    #Marcador
+    {
+        position: relative;
+        z-index: 6;
+        right: 3vh;
+        bottom: 1vh;
+    }
+
+    /* Ex-Coluna Direta do Container Reservar (Mobile) */
+    #ReservarReserva
+    {
+        position: relative;
+        right: 0;
+        min-width: 100%;
+        padding-top: 2.5vh;
+        font-size: 2vh;
+    }
+
+        /* Título da Ex-Coluna */
+        #ReservarReserva h2
+        {
+            text-align: center;
+            font-size: 2.5vh;
+            font-weight: bold;
+
+        }
+
+    /* Formulário de Reserva (Mobile) */
+    #ReservarForm
+    {
+        background-color: #F3F3F3;
+        margin-left: 1vh;
+        margin-right: 1vh;
+        margin-bottom: 2vh;
+        padding-top: 3vh;
+        font-size: 2.5vh;
+        z-index: 2;
+        text-align: center;
+        position: absolute;
+        width: 95%;
+    }
+
+        /* Inputs do Tipo DATE no grupo "datas" do formulário */
+        #datas input[type="date"] {
+            border: none;
+            border-bottom: 0.2vw solid #000000;
+            outline: none;
+            background-color: transparent;
+            font-size: 2.5vh;
+            position: relative;
+            top: -4vh;
+            
+        }
+        
+        /* Inputs do Tipo TEXT no grupo "datas" do formulário */
+        #datas input[type="text"]
+        {
+            border: none;
+            border-bottom: 0.2vw solid #000000;
+            outline: none;
+            background-color: transparent;
+            font-size: 1.5vh;
+            width: 20vh;
+            position: relative;
+            top: -3vh;
+        }
+
+        /* Form Group: Quantidade Pessoas */
+        #qntdPessoas
+        {
+            position: relative;
+            margin-top: 4vh;
+        }
+
+            /* Inputs do Tipo NUMBER no grupo "qntdPessoas" do formulário */
+            #qntdPessoas input[type="number"]
+            {
+                border: none;
+                border-bottom: 0.2vh solid #000000;
+                outline: none;
+                background-color: transparent;
+                font-size: 2.5vh;
+                width: 20vh;
+                text-align: center;
+            }
+
+        /* Form Group: Observações */
+        #observacoes
+        {
+            position: relative;
+            margin-top: 4vh;
+            margin-bottom: 2vh;
+        }
+
+            /* Inputs do Tipo TEXTAREA no grupo "observacoes" do formulário */
+            #observacoes textarea
+            {
+                border: 0.1vh solid black;
+                border-radius: 1vh;
+                padding: 1vh;
+                font-size: 2.5vh;
+                margin-top: 0;
+                max-width: 100%;
+                min-width: 100%;
+                margin-top: 2vh;
+            }
+
+}

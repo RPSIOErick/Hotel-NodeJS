@@ -1,0 +1,432 @@
+.d-grid-mC
+{
+    /*Position*/
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+}
+.d-grid-reserva-mC
+{
+    /*Position*/
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+}
+/*Parte esquerda*/
+
+    /*Container Azul*/
+        #d-containerAzul-mC
+        {
+            /*Background*/
+                background-color: #2D627D;
+
+            /*Padding*/
+                padding-bottom: 1vh;
+                
+            /*Position*/
+                position: relative;
+
+            /*Size*/
+                height: 100%;
+
+        }
+
+    /*Titulos*/
+        #d-containerAzul-mC h2
+        {
+            /*Text*/
+                font-size: 1.5vw;
+
+            /*Position*/
+                margin: 2vw;
+        }
+    /*Botão voltar para a home*/
+        #d-containerAzul-mC div
+        {
+            /*Background*/
+                background-color: #10445E;
+
+            /*Size*/
+                width: 100%;
+                height: 20%;
+
+            /*Position*/
+                position: absolute;
+                bottom: 2vh;
+        }
+
+    /*Href voltar para a home*/
+        #d-containerAzul-mC a
+        {
+            /*Text*/
+                font-size: 1.5vw;
+
+            /*Position*/
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+        }
+
+/*Fim da Parte esquerda*/
+
+/*Parte direita*/
+
+    /*Conatainer Branco*/
+        #d-containerBranco-mC
+        {
+            /*Padding*/
+                padding: 3vw;
+        }
+
+    /*Titulos*/
+        #d-containerBranco-mC h2
+        {
+            /*Text*/
+                font-size: 2vw;
+                font-weight: 700;
+
+            /*Position*/
+                margin-bottom:2vh;
+        }
+    
+    /*Dados Pessoais*/
+        
+        /*Campo*/
+            .d-camposDadosPessoais-mC
+            {
+                /*Position*/
+                    margin: 2vw;
+
+                /*Text*/
+                    font-size: 1.5vw;
+            }
+
+        /*Labels*/
+            .d-camposDadosPessoais-mC label
+            {
+                /*Text*/
+                    font-weight: 600;
+            }
+        /*Inputs*/
+            .d-camposDadosPessoais-mC input
+            {
+                /*Position*/
+                    display: inline-block;
+                    margin-left: 1vw;
+            
+                /*Background*/
+                    background-color: #B6C8D1;
+
+                /*Border*/
+                    border-radius: 2vw;
+
+                /*Size*/
+                    width: 35%;
+                
+                /*Padding*/
+                    padding-left: 1vw;
+                    padding-right: 1vw;
+                    padding-top: 1vh;
+                    padding-bottom: 1vh;
+                    
+            }
+            #email_user
+            {
+                /*Background*/
+                    background-color: #96a5ac;
+            }
+        /*Imagem*/
+            .d-camposDadosPessoais-mC img
+            {
+                /*Size*/
+                    width: 2vw;
+
+                /*Position*/
+                    display: inline-block;
+            }
+
+        /*Botão*/
+            .btn-azul-mC
+            {
+                /*Text*/
+                    text-align: center;
+                    font-size: 1.5vw;
+
+                /*Background*/
+                    background-color: #2D627D;
+
+                /*Padding*/
+                    padding-left: 2vw;
+                    padding-right: 2vw;
+                    padding-top: 1.5vh;
+                    padding-bottom: 1.5vh;
+                
+                /*Border*/
+                    border-radius: 2vw;
+            }
+    /*Fim dos dados pessoais*/
+
+    /*Minhas Reservas*/
+        .d-minhasReservas-mC
+        {   
+
+        }
+        .d-fitaVermelha-mC
+        {
+            /*Background*/
+                background-color: #C83E3E;
+
+            /*Size*/
+                width: 4vw;
+                height: 5.5vw;
+
+            /*Position*/
+                position: absolute;
+                right: 2vh;
+                top: -2vh;
+
+
+        }
+        .d-fitaVermelha-mC::after
+        {
+             /*Content*/
+                content: "";
+            
+            /*Position*/
+                position: absolute;
+                left: 0;
+                bottom: 0;
+
+            /*Size*/
+                width: 0;
+                height: 0;
+                
+            /*Border*/
+                border-bottom: 2vw solid #F3F3F3;
+                border-left: 2vw solid transparent;
+                border-right: 2vw solid transparent;
+        }
+        .d-cartaoCinza-mC
+        {
+            /*Position*/
+                margin-top: 4vh;
+                position: relative;
+
+            /*Background*/
+                background-color: #F3F3F3;
+
+            /*Border*/
+                border-width: 0.1vw;
+                border-style: solid;
+                border-color: black;
+                border-radius: 1vw;
+                
+            /*Text*/
+                font-size: 1.5vw;
+            
+            /*Padding*/
+                padding-left: 2vw;
+                padding-right: 2vw;
+                padding-top: 3vh;
+                padding-bottom: 3vh;
+
+            /*Size*/
+                width: fit-content;
+        }
+        .d-cartaoCinza-mC label
+        {
+            /*Text*/
+                font-weight: 700;
+
+        }
+        .d-cartaoCinza-mC input
+        {
+            /*Background*/
+                background-color: transparent;
+        }
+        #partida_res
+        {
+            /*Position*/
+            
+                margin-top: 1vh;
+                margin-bottom: 1vh;
+        }
+        #num-pessoas_res
+        {
+            /*Position*/
+                margin-bottom: 1vh;
+        }
+        #observacao_res
+        {
+            /*Size*/
+                width: 100%;
+                min-height: 10vh;
+        }
+        .d-camposReservasInfo-mC
+        {
+        }
+
+    /*Fim do Minhas Reservas*/
+/*Fim da parte direita*/
+
+@media screen and (orientation: portrait) 
+{
+    .d-grid-mC
+    {
+        /*Position*/
+            grid-template-columns: 1fr;
+    }
+    .d-grid-reserva-mC
+    {
+        /*Position*/
+            grid-template-columns: repeat(1, 1fr);
+    }
+    /*Parte esquerda*/
+
+        /*Container Azul*/
+        #d-containerAzul-mC
+        {
+            /*Padding*/
+                padding-bottom: 0vh;
+
+        }
+
+    /*Titulos*/
+        #d-containerAzul-mC h2
+        {
+            display: none;
+        }
+    /*Botão voltar para a home*/
+        #d-containerAzul-mC div
+        {
+            /*Size*/
+                width: 100%;
+                height: 10vh;
+
+            /*Position*/
+                position: relative;
+                margin-top: 4vh;
+        }
+
+    /*Href voltar para a home*/
+        #d-containerAzul-mC a
+        {
+            /*Text*/
+                font-size: 3vh;
+        }
+
+    /*Fim da Parte esquerda*/
+
+    /*Parte direita*/
+
+        /*Conatainer Branco*/
+            #d-containerBranco-mC
+            {
+                /*Padding*/
+                    padding: 3vw;
+            }
+
+        /*Titulos*/
+            #d-containerBranco-mC h2
+            {
+                /*Text*/
+                    font-size: 3vh;
+            }
+
+        /*Dados Pessoais*/
+            
+            /*Campo*/
+                .d-camposDadosPessoais-mC
+                {
+                    /*Text*/
+                        font-size: 2.5vh;
+                }
+
+            /*Labels*/
+                .d-camposDadosPessoais-mC label
+                {
+                }
+            /*Inputs*/
+                .d-camposDadosPessoais-mC input
+                {
+                    /*Size*/
+                        width: max-content;
+
+                    /*Position*/
+                        margin-bottom: 2vh;
+                    
+                }
+                #email_user
+                {
+                    /*Background*/
+                        background-color: #96a5ac;
+                }
+            /*Imagem*/
+                .d-camposDadosPessoais-mC img
+                {
+                    /*Size*/
+                        width: 6vw;
+                }
+
+            /*Botão*/
+                .btn-azul-mC
+                {
+                    /*Text*/
+                        font-size: 2.5vh;
+
+                    /*Position*/
+                        margin-bottom: 2vh;
+
+                }
+        /*Fim dos dados pessoais*/
+
+        /*Minhas Reservas*/
+            .d-fitaVermelha-mC
+            {
+                /*Size*/
+                    width: 8vw;
+                    height: 11vw;
+
+
+            }
+            .d-fitaVermelha-mC::after
+            {
+                border-bottom: 4vw solid #F3F3F3;
+                border-left: 4vw solid transparent;
+                border-right: 4vw solid transparent;
+            }
+            .d-cartaoCinza-mC
+            {       
+                /*Text*/
+                    font-size: 2.5vh;
+
+                /*Position*/
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+                
+            }
+            #partida_res
+            {
+                /*Position*/
+                    margin-top: 1vh;
+                    margin-bottom: 1vh;
+            }
+            #num-pessoas_res
+            {
+                /*Position*/
+                    margin-bottom: 1vh;
+            }
+            #observacao_res
+            {
+                /*Size*/
+                    width: 100%;
+                    min-height: 10vh;
+            }
+            .d-camposReservasInfo-mC
+            {
+            }
+
+        /*Fim do Minhas Reservas*/
+    /*Fim da parte direita*/
+
+}

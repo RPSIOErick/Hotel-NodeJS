@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+*
+{
+    font-family: "Nunito Sans", sans-serif;
+}
+.d-grid-2cols
+{
+    /*Position*/
+        display: grid;
+        grid-template-columns:  1fr 1fr;
+}

@@ -1,0 +1,76 @@
+<title>Home - Hotel Luxury Bela Vista</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!--AJAX -->
+
+<!--CSS anaBot-->
+    <link rel="stylesheet" type="text/css" href="../css/anaBot.css">
+
+<!--JS que faz o chat ser em tempo real-->
+    <script src="../js/anaSyncChat.js"></script>
+    <script src="../js/openPopUp.js"></script>
+<body>
+
+    <!--Botão Popup Ana-->
+        <div class="btnAna">
+            <!--Circulo vermelho 1-->
+                <div class="btn1-ana">
+                    <text>1</text>
+                </div>
+            <!--Botão Robo-->
+                <a href="#popup-ana" class="btnAna-robo" onclick="openPopUp()">
+                    <img src="../../img/ana.png" alt="Botão para abrir o chat bot">
+                </a>
+        </div>
+    <!--Fim do Botão Popup Ana-->
+
+    <!--Popup Ana-->
+        <div id="popup-ana" class="overlay">
+            <div class="popup">
+
+                <!--Parte de cima com nome e foto-->
+                    <div id="popupAna-header" class="grid grid-cols-3">
+
+                        <div class="popupHeader-col1-ana">
+                            <img src="../img/ana.png" alt="Foto de Perfil do ChatBot" class="profile-picture-ana">
+                        </div>
+
+                        <div class="popupHeader-col2-ana">
+                            <h2>Ana</h2>
+                            <p>Assistente Virtual do Hotel Hotel</p>
+                        </div>
+
+                        <div class="popupHeader-col3-ana">
+                            <a href="/" class="btnFechar-ana" onclick="closePopUp()">
+                                <img src="../img/btn-fechar.png" alt="Botão Fechar ChatBot">
+                            </a>
+                        </div>
+
+
+                        
+                    </div>
+
+                <!--Parte do meio com as mensagens-->
+                    <div id="popupAna-body">
+
+                        <div class="popupAna-mensagemCol-Ana">
+                            <p class="popupAna-mensagem-ana">Olá, eu sou a Ana, a assistente virtual do Hotel Luxury Bela Vista, como posso te ajudar?</p>
+                        </div>
+
+                    </div>
+
+                <!--Parte final com as perguntas-->
+                    <form id="popupAna-enviarMensagem" >
+                        <select name="anaQuestions" id="anaQuestions">
+                            <option value="Onde fica localizado Hotel Hotel?">                      Onde fica localizado Hotel Hotel?</option>
+                            <option value="Qual o horario de funcionamento da recepção do Hotel?">  Qual o horario de funcionamento da recepção do Hotel?</option>
+                            <option value="Quais são os tipos de quarto disponiveis?">              Quais são os tipos de quarto disponiveis?</option>
+                            <option value="Como faço minha reserva?">                               Como faço minha reserva?</option>
+                            <option value="Como faço para falar com o hotel?">                      Como faço para falar com o hotel?</option>
+                        </select>
+            
+                        <button type="submit"><img src="../img/btn-enviar.png" alt="" srcset=""></button>
+                    </form>
+            </div>
+        </div>
+    <!--Fim do Popup Ana-->
+</body>
