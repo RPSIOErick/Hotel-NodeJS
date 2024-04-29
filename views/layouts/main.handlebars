@@ -9,16 +9,132 @@
     
     <link rel="stylesheet" href="../../css/main.css">
     <link rel="stylesheet" href="../../css/navbar.css">
-    
+    <link rel="stylesheet" href="../../css/footer.css">
+
     <!--Tailwind-->
         <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
 
     <!--NavBar-->
+        <nav class="navbar">
 
+            <!--Header-->
+                <div class="navbar-header">
+
+                    <!--Parte esquerda-->
+                        <div class="d-esquerda-navbar">
+                                <!--Logo-->
+                                    <a href="/">
+                                        <img src="../../img/Logo.png" alt="Logo Hotel Luxury Bela Vista" class="img-logo-navbar">
+                                    </a>
+
+                                <!--Titulo do Site-->
+                                    <h2>Hotel Luxury Bela Vista</h2>
+                        </div>
+                    <!--Fim da parte esquerda-->
+
+
+                    <!--Parte Direita-->
+                        <div class="d-direita-navbar">
+
+                            <!--Botão Logar ou Icone Logado-->
+                                <form id="isLoggedIn">
+
+                                    <a href="/minha-conta" id="logado">
+                                        <img src="../../img/navbar/user.png" alt="Icone Logado" style="display: none;"> <!--ANTENÇÃO AO DISPLAY NONE-->
+                                    </a>
+
+                                    <a href="/login" id="deslogado">Fazer Login</a>
+                                </form>
+
+                            <!--Menu Hamburger-->
+                                <img src="..." alt="Menu"  class="img-menuHambuger-navbar" id="menu-trigger"onclick="toggleNavbar()">
+                        </div>
+                    <!--Fim da Parte Direita-->
+
+                </div>
+            <!--Fim do Header-->
+
+            <!--Body-->
+                <div id="navbar-body">
+
+                    <a href="/" class="d-firstItem-navbar">home</a>
+                    <a href="/quartos">quartos</a>
+                    <a href="/quartos">minha conta</a>
+
+                </div>
+            <!--Fim do Body-->
+        </nav>
     <!--Fim da Navbar-->
 
     {{{body}}}
+
+    <footer>
+
+        <!--Div Principal-->
+            <div class=" grid-cols-3 gap-2 p-6 d-principal-footer">
+                
+                <!--Div Hotel-->
+                    <div class="d-hotel-footer">
+                        <h2>HOTEL LUXURY BELA VISTA</h2>
+                        <p>Descubra o conforto e luxo em nosso hotel exclusivo. Oferecemos acomodações elegantes, serviços de primeira classe e uma experiência memorável. Faça sua reserva agora e comece a sua jornada de relaxamento conosco!</p>
+                    </div>
+                <!--Fim da Div Hotel-->
+
+                <!--Div Localização-->
+                    <div class="d-localizacao-footer">
+                        <h2>LOCALIZAÇÃO</h2>
+                        <iframe 
+                            src="https://www.google.com/maps/d/u/0/embed?mid=1QzX-o5J6lT3kJ3rkUd4QAX8ljwQcRLI&ehbc=2E312F&noprof=1" 
+                            class="iframe-mapa-footer"
+                        ></iframe>
+    
+                        <p>Rua Carlos Sampaio, 202, CEP 11265-900 - São Paulo, SP, Brasil</p>
+                    </div>
+                <!--Fim da Div Localização-->
+
+                <!--Div Contato-->
+                    <div class="d-contato-footer">
+                        <h2>CONTATO</h2>
+                        <p>Tire suas duvidas com a nossa equipe.</p>
+
+                            <div class="grid-cols-3 gap-2 p-6 d-iconesContato-foooter">
+                                
+                                <!--Icone Facebook-->
+                                    <div>
+                                        <a href="https://pt-br.facebook.com/">
+                                            <img src="../../img/footer/icon_facebook.png" alt="Icone Facebook">
+                                        </a>
+                                    </div>
+
+                                <!--Icone Instagram-->
+                                    <div>
+                                        <a href="https://www.instagram.com/?hl=pt-br">
+                                            <img src="../../img/footer/icon_instagram.png" alt="Icone Instagram" id="IconInstagram">
+                                        </a>
+                                    </div>
+                                <!--Icone Twitter-->
+                                    <div>
+                                        <a href="https://twitter.com/home">
+                                            <img src="../../img/footer/icon_twitter.png" alt="Icone Twitter">
+                                        </a>
+                                    </div>
+
+                            </div>
+                    </div>
+                <!--Fim da Div Contato-->
+
+            </div>
+        <!--Fim da Div Principal-->
+
+        <!--Div Copyright-->
+            <div class="d-copyright-footer">
+                <p>Copyright ©2024 Todos os direitos reservados. | Hotel Luxury Bela Vista</p>
+            </div>
+        <!--Fim da Div Copyright-->
+    </footer>
+
+    <script src="../../js/navbar.js"></script>
 </body>
 </html>

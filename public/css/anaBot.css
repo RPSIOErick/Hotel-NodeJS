@@ -1,18 +1,14 @@
 
-body
-{
-    background-color: lightblue;
-}
-
 /*Botão para abrir o chat Ana*/
 
     /*Botão Robo*/
         .btnAna
         {
             /*Position*/
-                position: absolute;
+                position: fixed;
                 right: 10vh;
                 bottom: 5vw;
+                z-index: 30;
         }
 
 
@@ -88,12 +84,12 @@ body
             /*Visibility*/
                 visibility: visible;
                 opacity: 1;
-                z-index: 20;
+                z-index: 50;
         }
     /*Fim da Configuração Padrao*/
 
     /*Popup (Posição)*/
-        .popup 
+        #popup-ana .popup 
         {
             /*Size*/
                 width: 25%;
@@ -430,7 +426,7 @@ body
     /*Popup Chat*/
 
         /*Popup (Posição)*/
-            .popup 
+            #popup-ana .popup 
             {
                 /*Size*/
                     width: 95%;

@@ -1,7 +1,4 @@
-body
-{
-    overflow: hidden;
-}
+
 #popup-reservado
 {
     /*Position*/
@@ -27,7 +24,7 @@ body
         opacity: 1;
         z-index: 20;
 }
-.popup 
+#popup-reservado .popup 
 {
     /*Size*/
         width: 65%;

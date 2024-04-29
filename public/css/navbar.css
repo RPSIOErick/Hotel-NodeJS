@@ -1,6 +1,328 @@
-.navbar-hotelBV
+.img-logo-navbar,
+.navbar-header h2,
+#isLoggedIn,
+#logado,
+#deslogado,
+.img-menuHambuger-navbar
 {
-    /*Background*/
-        background-color: #023047;
+    /*Position*/
+        display: inline-block;
+}
 
+.navbar
+{
+    z-index: -1;
+}
+/*Navbar Header*/
+    .navbar-header
+    {
+        /*Background*/
+            background-color: #003559;
+
+        /*Border*/
+            border-bottom: 0.5vw solid #BA8F20;
+
+        /*Size*/
+            width: 100%;
+
+        /*Position*/
+            position: block;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+        /*Padding*/
+            padding-left: 1.5vw;
+            padding-right: 1.5vw;
+            padding-top: 2vh;
+            padding-bottom: 2vh;
+    }
+
+    /*Parte Esquerda*/
+
+        /*Div Navbar*/
+            .d-esquerda-navbar
+            {
+                display: flex;
+                align-items: center;
+            }
+        /*Logo*/
+            .img-logo-navbar
+            {
+                /*Size*/
+                    width: 3vw;
+
+                /*Position*/
+                    margin-right: 2vh;
+            }
+
+        /*Titulo*/
+            .d-esquerda-navbar h2
+            {
+                /*Text*/
+                    font-size: 2vw;
+                    color: white;
+            }
+
+    /*Fim da Parte Esquerda*/
+
+    /*Parte Direita*/
+
+        /*Div Parte Direita*/
+            .d-direita-navbar
+            {
+                display: flex;
+                align-items: center;
+                justify-self: end;
+            }
+            
+        /*Icone Logado*/
+            #logado
+            {
+                /*Size*/
+                    width: 4vw;
+
+                /*Position*/
+                    margin-top: 1.5vh;
+            }
+
+        /*Link Deslogado*/
+            #deslogado
+            {
+                /*Text*/
+                    font-size: 1.5vw;
+                    color: white;
+
+                /*Border*/
+                    border-width: 0.15vw;
+                    border-style: solid;
+                    border-color: white;
+                    border-radius: 1vw;     
+                    
+                    
+                /*Padding*/
+                    padding-left: 1vw;
+                    padding-right: 1vw;
+                    padding-top: 1vh;
+                    padding-bottom: 1vh;
+            }
+            
+        /*Menu Hambuguer*/
+            .img-menuHambuger-navbar
+            {
+                /*Size*/
+                    width: 5vw;
+
+                /*Position*/
+                    margin-left: 1.5vw;
+
+                /*Border*/
+                    border-width: 0.15vw;
+                    border-style: solid;
+                    border-color: white;
+                    border-radius: 1vw;
+
+                /*Padding*/
+                    padding-left: 1vw;
+                    padding-right: 1vw;
+                    padding-top: 1vh;
+                    padding-bottom: 1vh;
+                    
+                    cursor: pointer;
+
+
+            }
+    /*Fim da Parte Direita*/
+
+/*Fim da Navbar Header*/
+
+/*Navbar body*/
+    #navbar-body
+    {
+        /*Size*/
+            width: 20%;
+            height: max-content;
+
+        /*Background*/
+            background: #003559;
+
+        /*Position*/
+            right: 0;
+            display: none;
+            position: absolute;
+
+        /*Padding*/
+            padding-left: 2vw;
+            padding-right: 2vw;
+            padding-top: 2vh;
+            padding-bottom: 2vh;
+
+    }
+
+    /*Links Navbar*/
+        #navbar-body a
+        {
+            /*Text*/
+                font-size: 1.5vw;
+                color: white;
+
+            /*Position*/
+                display: block;
+        }
+
+/*Fim da Navbar Body*/
+
+@media screen and (orientation: portrait) 
+{
+    /*Navbar Header*/
+        .navbar-header
+        {
+            /*Border*/
+                border-bottom: 1vw solid #BA8F20;
+
+            /*Size*/
+                width: 100%;
+
+            /*Padding*/
+                padding-left: 3vw;
+                padding-right: 3vw;
+                padding-top: 4vh;
+                padding-bottom: 4vh;
+        }
+
+        /*Parte Esquerda*/
+
+            /*Div Navbar*/
+                .d-esquerda-navbar
+                {
+                    display: flex;
+                    align-items: center;
+                }
+            /*Logo*/
+                .img-logo-navbar
+                {
+                    /*Size*/
+                        width: 8vw;
+
+                    /*Position*/
+                        margin-right: 4vh;
+                }
+
+            /*Titulo*/
+                .d-esquerda-navbar h2
+                {
+                    /*Text*/
+                        font-size: 2.5vh;
+
+                    /*Size*/
+                        width: 60%;
+                }
+
+        /*Fim da Parte Esquerda*/
+
+        /*Parte Direita*/
+
+            /*Div Parte Direita*/
+                .d-direita-navbar
+                {
+                    display: flex;
+                    align-items: center;
+                    justify-self: end;
+                }
+                
+            /*Icone Logado*/
+                #logado
+                {
+                    /*Size*/
+                        width: 8vw;
+
+                    /*Position*/
+                        margin-top: 1vh;
+                }
+
+            /*Link Deslogado*/
+                #deslogado
+                {
+                    /*Text*/
+                        font-size: 2vh;
+                        width: max-content;
+
+                    /*Border*/
+                        border-width: 0.3vw;
+                        border-style: solid;
+                        border-color: white;
+                        border-radius: 1vw;     
+                        
+                        
+                    /*Padding*/
+                        padding-left: 1vw;
+                        padding-right: 1vw;
+                        padding-top: 1vh;
+                        padding-bottom: 1vh;
+                }
+                
+            /*Menu Hambuguer*/
+                .img-menuHambuger-navbar
+                {
+                    /*Size*/
+                        width: 10vw;
+
+                    /*Position*/
+                        margin-left: 3vw;
+
+                    /*Border*/
+                        border-width: 0.3vw;
+                        border-style: solid;
+                        border-color: white;
+                        border-radius: 1vw;
+
+                    /*Padding*/
+                        padding-left: 2vw;
+                        padding-right: 2vw;
+                        padding-top: 1vh;
+                        padding-bottom: 1vh;
+                        
+                        cursor: pointer;
+
+
+                }
+        /*Fim da Parte Direita*/
+
+    /*Fim da Navbar Header*/
+
+    /*Navbar body*/
+        #navbar-body
+        {
+            /*Size*/
+                width: 60%;
+                height: max-content;
+
+            /*Background*/
+                background: #003559;
+
+            /*Position*/
+                display: none;
+                position: absolute;
+                right: 0;
+
+            /*Padding*/
+                padding-left: 2vw;
+                padding-right: 2vw;
+                padding-top: 2vh;
+                padding-bottom: 2vh;
+
+                z-index: 19;
+
+        }
+
+        /*Links Navbar*/
+            #navbar-body a
+            {
+                /*Text*/
+                    font-size: 3vh;
+
+                /*Position*/
+                    display: block;
+
+            }
+    /*Fim da Navbar Body*/    
 }

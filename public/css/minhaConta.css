@@ -20,6 +20,7 @@
 
             /*Padding*/
                 padding-bottom: 1vh;
+                padding-top: 1vh;
                 
             /*Position*/
                 position: relative;
@@ -27,6 +28,7 @@
             /*Size*/
                 height: 100%;
 
+                z-index: -1;
         }
 
     /*Titulos*/
@@ -75,6 +77,7 @@
         {
             /*Padding*/
                 padding: 3vw;
+
         }
 
     /*Titulos*/

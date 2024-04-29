@@ -2,7 +2,6 @@
     body
     {
         background-color: #2D627D;
-        overflow-y: hidden;
     }
 /*Grid da Pagina*/
     .d-grid-login
@@ -10,7 +9,6 @@
         /*Position*/
             display: grid;
             grid-template-columns:  1.2fr 0.8fr;
-
     }
 
     /*Parte esqueda*/
@@ -27,7 +25,7 @@
         }
         #d-imgHotelExt-login img
         {
-            height: 80%;
+            height: 75%;
         }
     /*Fim da Parte esqueda*/
 
@@ -47,6 +45,8 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    z-index: -1;
+
             }
         
         /*Formulario - Parte branca*/
@@ -73,6 +73,8 @@
                     padding-right: 3vw;
                     padding-top: 2vh;
                     padding-bottom: 2vh;
+
+
             }
 
         /*Fita Vermelha*/
