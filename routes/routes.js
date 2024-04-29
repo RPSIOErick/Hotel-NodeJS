@@ -57,6 +57,12 @@
             res.render("login")
         })
 
+    // Cadastrar
+        app.get("/cadastrar", function(req, res)
+        {
+            res.render("cadastrar")
+        })
+
     // Visualizar quartos
         app.get("/quartos", function(req, res)
         {
