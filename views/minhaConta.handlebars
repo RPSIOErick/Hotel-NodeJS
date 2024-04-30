@@ -1,0 +1,229 @@
+<title>Minha Conta - Hotel Luxury Bela Vista</title>
+<!--CSS Minha Conta-->
+    <link rel="stylesheet" type="text/css" href="../css/minhaConta.css">
+    <link rel="stylesheet" type="text/css" href="../css/popupReservado.css">
+
+<body>
+
+    <!--Grid CSS-->
+        <div class="d-grid-mC">
+
+            <!--Container azul (que contem os titulos)-->
+                <div id="d-containerAzul-mC" style="z-index: -1;">
+                    <h2 class="text-white text-center">Dados Pessoais</h2>
+                    <h2  class="text-white text-center">Minhas Reservas</h2>
+                    <div>
+                        <a href=""  class="text-white text-center">Voltar para a Home</a>
+                    </div>
+                    
+                </div>
+            <!--Fim do Container azul-->
+            
+            <!--Parte direita (com os dados pessoais e reservas)-->
+                <div id="d-containerBranco-mC">
+                    
+                    <!--Dados Pessoais-->
+                        <div id="d-dadosPessoais">
+
+                            <h2>Dados Pessoais</h2>
+
+                            <!--Campo Nome-->
+                                <form action="" id="updateNomeUser" class="d-camposDadosPessoais-mC">
+                                    <label for="nome_user">Nome:</label>
+                                    <input type="name" name="nome_user" id="nome_user" value="NOME">
+
+                                    <button type="submit">
+                                        <img src="../img/minhaConta/editar.png" alt="Botão Editar Nome do Usuario">
+                                    </button>
+                                </form>
+                                
+
+                            <!--Campo Email-->
+                                <div id="d-email-mC" class="d-camposDadosPessoais-mC">
+                                    <label for="email_user">Email:</label>
+                                    <input type="email" name="email_user" id="email_user" disabled value="EMAIL">
+                                    <img src="../img/minhaConta/cadeado.png" alt="Icone de Cadeado">
+                                </div>
+
+                            <!--Campo senha-->
+                                <form action="" id="updaterSenhaUser" class="d-camposDadosPessoais-mC">
+                                    <label for="senha_user">Nova Senha:</label>
+                                    <input type="password" name="senha_user" id="senha_user" value="SENHA?">
+
+                                    <button type="submit" class="btn-azul-mC text-white">Alterar Senha</button>
+                                </form>
+                        </div>
+                    <!--Fim dos Dados Pessoais-->
+
+                    <!--Minhas reservas-->
+                        <div id="d-minhasReservas-mC">
+
+                            <h2>Minhas Reservas</h2>
+                            <a href="" class="btn-azul-mC text-white">Fazer uma nova reserva</a>
+
+                            <!--Cartoes Reserva-->
+                                <div class="d-grid-reserva-mC">
+
+                                    <!--Cartão Reserva 1-->
+                                        <div class="d-cartaoCinza-mC">
+
+                                            <div class="d-fitaVermelha-mC"></div>
+
+                                                <!--Informações-->
+                                                    <form action="" id="readReservasInfo">
+                                                        
+                                                        <!--Campo Chegada-->
+                                                            <div class="d-camposReservasInfo-mC">
+                                                                <label for="chegada_res">Chegada:</label>
+                                                                <input type="date" name="chegada_res" id="chegada_res" value="2024-03-23">
+                                                            </div>   
+
+                                                        <!--Campo Partida-->
+                                                            <div class="d-camposReservasInfo-mC">
+                                                                <label for="partida_res">Partida:</label>
+                                                                <input type="date" name="partida_res" id="partida_res"  value="2024-05-27">
+                                                            </div>
+
+                                                        <!--Campo N° de Pessoas-->
+                                                            <div class="d-camposReservasInfo-mC">
+                                                                <label for="num-pessoas_res">N° de Pessoas:</label>
+                                                                <input type="number" name="num-pessoas_res" id="num-pessoas_res"  value="4">
+                                                            </div>
+
+                                                        <!--Campo Observações-->
+                                                            <div class="d-camposReservasInfo-mC">
+                                                                <label for="observacao_res">Observações:</label><br>
+                                                                <textarea name="observacao_res" id="observacao_res">Sou pobre e pagarei lavando pratos.Sou pobre e pagarei lavando pratos.Sou pobre e pagarei lavando pratos.Sou pobre e pagarei lavando pratos.Sou pobre e pagarei lavando pratos.</textarea>
+                                                            </div>
+
+                                                    </form>
+                                                
+                                        </div>
+                                    <!--Fim do cartao Reserva 1-->
+
+                                    <!--Cartão Reserva 2-->
+                                        <div class="d-cartaoCinza-mC">
+
+                                            <div class="d-fitaVermelha-mC"></div>
+
+                                            <!--Informações-->
+                                                <form action="" id="readReservasInfo">
+                                                    
+                                                    <!--Campo Chegada-->
+                                                        <div class="d-camposReservasInfo-mC">
+                                                            <label for="chegada_res">Chegada:</label>
+                                                            <input type="date" name="chegada_res" id="chegada_res" value="2024-03-23">
+                                                        </div>   
+
+                                                    <!--Campo Partida-->
+                                                        <div class="d-camposReservasInfo-mC">
+                                                            <label for="partida_res">Partida:</label>
+                                                            <input type="date" name="partida_res" id="partida_res"  value="2024-05-27">
+                                                        </div>
+
+                                                    <!--Campo N° de Pessoas-->
+                                                        <div class="d-camposReservasInfo-mC">
+                                                            <label for="num-pessoas_res">N° de Pessoas:</label>
+                                                            <input type="number" name="num-pessoas_res" id="num-pessoas_res"  value="4">
+                                                        </div>
+
+                                                    <!--Campo Observações-->
+                                                        <div class="d-camposReservasInfo-mC">
+                                                            <label for="observacao_res">Observações:</label><br>
+                                                            <textarea name="observacao_res" id="observacao_res" cols="1" rows="1">Sou pobre e pagarei lavando pratos.Sou pobre e pagarei lavando pratos.Sou pobre e pagarei lavando pratos.Sou pobre e pagarei lavando pratos.Sou pobre e pagarei lavando pratos.</textarea>
+                                                        </div>
+
+                                                </form>
+                                                
+                                        </div>
+                                    <!--Fim do cartao Reserva 2-->
+
+                                </div>
+                            <!--Fim dos Cartoes reserva-->
+
+                        </div>
+                    <!--Fim do Minhas reservas-->
+
+                </div>
+            <!--Fim da parte direita-->
+
+        </div>
+    <!--Fim da Grid Taiwind-->
+
+
+
+    <!--Popup reservado-->
+        <div id="popup-reservado" class="overlay">
+
+            <div class="popup">
+
+                <!--Fita Vermelha-->
+                    <div class="d-fitaVermelha-reservado">
+                        <a href="/minha-conta">
+                            <img src="../img/btn-fechar.png" alt="Botão para fechar o PopUp">
+                        </a>
+                    </div>
+                <!--Fim da Fita Vermelha-->
+
+                <!--Confirmação-->
+                    <img src="../img/reservado/ok.png" alt="Simbolo de Confirmação" class="img-confirmacao-reservado">
+                    <h1>Quarto Alugado</h1>
+
+                    <p>Veja mais quartos alugáveis e relaxe no máximo conforto!</p>
+                    <div class="a-verMais-reservado">
+                        <a href="" >Ver mais</a>
+                    </div>
+
+                <!--Dados da reserva-->
+                    <div class="d-dadosReserva-reservado">
+
+                        <!--Imagem do quarto-->
+                            <div class="d-quartoImg-reservado">
+                                <img src="../img/reservado/room.png" alt="Imagem do quarto">
+                            </div>
+
+
+                        <!--Formulario de Reserva-->
+                            <form id="readReserva">
+
+                                <!--Grid 2 colunas-->
+                                    <div class="d-grid-2cols d-reservaDados-reservado">
+
+                                        <div>
+
+                                            <!--Campo Chegada-->
+                                                <label for="chegada_reserva">Chegada:</label>
+                                                <input type="date" id="chegada_reserva" name="chegada_reserva" value="2024-05-23"><br>
+
+                                            <!--Campo Partida-->
+                                                <label for="partida_reserva">Partida:</label>
+                                                <input type="date" id="partida_reserva" name="partida_reserva" value="2024-05-27">
+
+                                        </div>
+
+                                        <div>
+                                            <!--Campo Numero de Pessoas-->
+                                                <label for="n-pessoas_reserva">N° de Pessoas:</label>
+                                                <input type="number" id="n-pessoas_reserva" name="n-pessoas_reserva" value="4">
+                                        </div>
+                                    
+                                    </div>
+                                <!--Fim Grid 2 colunas-->
+
+                                    <div>
+                                        <label for="">Observações:</label><br>
+                                        <textarea name="observacao_reserva" id="observacao_reserva">Sou pobre e pagarei lavando pratos.</textarea>
+                                    </div>
+
+                            </form>
+                        <!--Fim do Formulario de Reserva-->
+
+                    </div>
+                <!--Fim dos Dados da reserva-->
+
+            </div>
+
+        </div>
+    <!--Fim do Popup reservado-->
+
+</body>

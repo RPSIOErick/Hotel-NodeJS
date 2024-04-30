@@ -1,0 +1,207 @@
+body
+{
+    background: rgb(50, 94, 117);
+    background: linear-gradient(0.25turn, #325e75, rgb(50, 94, 117, 0.7));
+}
+/*Container branco*/
+    .d-containerBranco-quartos
+    {
+        /*Position*/
+            margin-top: 7%;
+            position: relative;
+
+        /*Background*/
+            background-color: white;
+
+        /*Padding*/
+            padding-top: 6vh;
+            padding-bottom: 6vh;
+            padding-left: 13vw;
+            padding-right: 7vw;
+    }
+
+/*Icone Agendamentos*/
+    .d-containerBranco-quartos img
+    {
+        /*Size*/
+            width: 10vw;
+
+        /*Position*/
+            position: absolute;
+            top: -5vw;
+            left: 2vw;
+    }
+
+/*Fita Vermelha*/
+    .d-fitaVermelha-quartos
+    {
+        /*Background*/
+            background-color: #C83E3E;
+
+        /*Size*/
+            width: 4vw;
+            height: 6.5vw;
+
+        /*Position*/
+            position: absolute;
+            right: 8vh;
+            top: -2vh;
+
+
+    }
+    .d-fitaVermelha-quartos::after
+    {
+            /*Content*/
+            content: "";
+        
+        /*Position*/
+            position: absolute;
+            left: 0;
+            bottom: 0;
+
+        /*Size*/
+            width: 0;
+            height: 0;
+            
+        /*Border*/
+            border-bottom: 2vw solid #F3F3F3;
+            border-left: 2vw solid transparent;
+            border-right: 2vw solid transparent;
+    }
+
+
+    /*Titulo agendamentos*/
+        .d-containerBranco-quartos h1
+        {
+            /*Text*/
+                font-weight: 700;
+                font-size: 2vw;
+        }
+    
+    
+    /*Card*/
+        .d-TiposDeQuarto-quartos .card
+        {
+            /*Size*/
+                width: 30vw;
+
+            /*Mouse*/
+                cursor: pointer;
+        }
+
+    /*Textos card*/
+        .d-TiposDeQuarto-quartos h2
+        {
+            /*Text*/
+                font-size: 2vw;
+            
+            /*Position*/
+                margin-top: 2vh;
+        }
+
+        .d-TiposDeQuarto-quartos p
+        {
+            /*Text*/
+                font-size: 1.5vw;
+            
+            /*Position*/
+                margin-top: 2vh;
+        }
+
+/*Texto Agendamentos*/
+    .d-containerBranco-quartos p
+    {
+        /*Text*/
+            font-size: 1.5vw;
+
+        /*Position*/
+            margin-top: 3vh;
+    }
+        @media screen and (orientation: portrait) 
+        {
+            /*Container branco*/
+                .d-containerBranco-quartos
+                {
+                    /*Position*/
+                        margin-top: 14%;
+
+                    /*Padding*/
+                        padding-top: 6vh;
+                        padding-bottom: 6vh;
+                        padding-left: 13vw;
+                        padding-right: 7vw;
+                }
+
+            /*Icone Agendamentos*/
+                .d-containerBranco-quartos img
+                {
+                    /*Size*/
+                        width: 15vw;
+                }
+
+            /*Fita Vermelha*/
+                .d-fitaVermelha-quartos
+                {
+                    /*Posaition*/
+                        right: 6vw;
+
+                    /*Size*/
+                        width: 8vw;
+                        height: 13vw;
+
+                }
+                .d-fitaVermelha-quartos::after
+                {        
+                    /*Border*/
+                        border-bottom: 4vw solid #F3F3F3;
+                        border-left: 4vw solid transparent;
+                        border-right: 4vw solid transparent;
+                }
+
+            /*Titulo agendamentos*/
+                .d-containerBranco-quartos h1
+                {
+                    /*Text*/
+                        font-size: 3vh;
+                }
+
+            /*Texto Agendamentos*/
+                .d-containerBranco-quartos p
+                {
+                    /*Text*/
+                        font-size: 2vh;
+
+                    /*Position*/
+                        margin-top: 3vh;
+                }
+            /*Tipos de Quartos - Grid Taiwind*/
+                .d-TiposDeQuarto-quartos
+                {
+                    display: block;
+                }
+
+            /*Card*/
+                .d-TiposDeQuarto-quartos .card
+                {
+                    width: 90vw;
+                }
+
+            /*Textos card*/
+                .d-TiposDeQuarto-quartos h2
+                {
+                    /*Text*/
+                        font-size: 3vh;
+                    
+                    /*Position*/
+                        margin-top: 2vh;
+                }
+
+                .d-TiposDeQuarto-quartos p
+                {
+                    /*Text*/
+                        font-size: 2vh;
+                    
+                    /*Position*/
+                        margin-top: 2vh;
+                }
+        }

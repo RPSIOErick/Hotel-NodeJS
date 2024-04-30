@@ -1,0 +1,127 @@
+<title>Reservar Quarto - Hotel Luxury Bela Vista</title>
+<link rel="stylesheet" href="../css/reservar.css">
+
+<body>
+    
+    {{!-- Container: Realizar Reserva --}}
+    <div class="w-screen h-screen mt-4" id="ContainerReservar">
+
+        {{!-- Grid com Informações e Reserva --}}
+
+            {{!-- Informações (Coluna 1) --}}
+            <div class="w-5/6 px-2" id="ReservarInfo">
+                
+                {{!-- Imagem do Quarto --}}
+                <img src="../img/reservar/Hotel_Luxo.png" id="ImagemQuarto" alt="Imagem do Quarto">
+
+                {{!-- Nome do Quarto --}}                
+                <h2 id="NomeQuarto" class="font-bold"> Quarto de Luxo </h2>
+                <p id="BrevePropaganda"> Viva o melhor dos seus dias com mais conforto e qualidade. </p>
+
+                {{!-- Informações do Quarto --}}
+                <h3 id="DetalhesQuarto"> Detalhes: </h3>
+
+                {{!-- Detalhes do Quarto --}}
+                <p id="DetalhesQuarto-P">
+
+                    Conexão Wi-Fi de Alta Qualidade; <br>
+                    Roupa de Cama de Luxo; <br>
+                    Smart TV Plana; <br>
+                    Serviços de Quarto -  VIP; <br>
+
+                </p>
+
+            </div>
+
+            {{!-- Reserva --}}
+            <div id="ReservarReserva">
+                
+                {{!-- Reservar (Coluna 2) --}}
+                <h2 class="font-bold"> Detalhes da Reserva </h2>
+
+                <br>
+
+                {{!-- Marcador de Página --}}
+                    <img src="../img/reservar/Marcador.svg" class="float-right" id="Marcador" alt="Marcador de Página">
+
+                    {{!-- Formulário de Reserva --}}
+                    <form id="ReservarForm" class="rounded-[1vw] border-2 border-black" method="POST" action="">
+
+
+                        {{!-- Div: Nome do Quarto --}}
+                        <input type="hidden" name="Nome_do_Quarto" value="Quarto de Luxo">
+
+                        {{!-- Div: Datas --}}
+                        <div class="form-group" id="datas">
+
+                            <label for="Chegada"> Chegada: </label> <p id="MobileBreak"> <br> </p>
+                            <input type="text" name="Chegada" id="chegada" required>
+
+                            <p id="MobileBreak"> <br> </p>
+
+                            <label for="Partida"> Partida: </label> <p id="MobileBreak"> <br> </p>
+                            <input type="text" name="Partida" id="partida" required>
+
+                        </div>
+
+                        {{!-- Div: Quantidade de Pessoas --}}
+                        <div class="form-group" id="qntdPessoas">
+
+                            <label for="Qntd_Pessoas"> Quantas pessoas? </label> <br>
+                            <input type="number" name="Qntd_Pessoas" id="num_Pessoas" required oninput="apenasNumeros(this);">
+                            
+                        </div>
+
+                        {{!-- Div: Observações --}}
+                        <div class="form-group" id="observacoes">
+                                
+                                <label for="Observacao"> Observações: </label> <br>
+                                <textarea name="Observacao" id="Observacao" rows="5" cols="50" placeholder="Ex: Quarto com vista para o mar."></textarea>
+
+                        </div>
+
+                        {{!-- Etiqueta de Confirmação --}}
+                        <div id="Confirmacao" class="px-5 py-5 text-center float-right w-50 border-2 border-t-0 border-black">
+                                
+                                {{!-- Preço Total --}}
+                                
+                                <p> Total: R$00,00 </p>
+
+                                {{!-- Valor da Reserva --}}
+                                <input type="hidden" name="Valor" value="">
+
+                                {{!-- Botão de Confirmação --}}
+                                <button type="submit" id="ConfirmarBtn" class="border-2 p-4 mt-3 rounded-full"> Confirmar Reserva </button>
+                        </div>
+
+                    </form>
+
+            </div>
+
+    </div>
+
+    <script>
+        
+        // Formatador do Input Data
+        document.addEventListener('DOMContentLoaded', function() {
+            const chegadaInput = document.getElementById('chegada');
+            const partidaInput = document.getElementById('partida');
+            
+            chegadaInput.addEventListener('click', function() {
+                this.type = 'date';
+            });
+
+            partidaInput.addEventListener('click', function() {
+                this.type = 'date';
+            });
+        });
+
+        // Função para Apenas Números (Input: Number)
+        function apenasNumeros(input) {
+            input.value = input.value.replace(/[^0-9]/g, '');
+        }
+
+    </script>
+
+</body>
+</html>

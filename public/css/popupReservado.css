@@ -1,0 +1,364 @@
+
+#popup-reservado
+{
+    /*Position*/
+        position: fixed;
+        top: 0;
+        bottom: -1px;
+        left: 0;
+        right: 0;
+
+    /*Background*/
+        background: rgb(0, 0, 0, 0.5);
+
+    /*Visibility*/
+        visibility: hidden;
+        opacity: 0;
+        z-index: 20;
+
+}
+#popup-reservado:target
+{
+    /*Visibility*/
+        visibility: visible;
+        opacity: 1;
+        z-index: 20;
+}
+#popup-reservado .popup 
+{
+    /*Size*/
+        width: 65%;
+        height: 80%;
+
+    /*Background*/
+        background: #F3F3F3;
+
+    /*Position*/
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+    /*Border*/
+        border-width: 0.1vw;
+        border-style: solid;
+        border-color: black;
+        border-radius: 1vw;
+
+    /*Padding*/
+        padding-left: 2vw;
+        padding-right: 2vw;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+}
+
+/*Fita vermelha*/
+    .d-fitaVermelha-reservado
+    {
+        /*Background*/
+            background-color: #C83E3E;
+
+        /*Size*/
+            width: 5.5vw;
+            height: 8.5vw;
+
+        /*Position*/
+            position: absolute;
+            right: 2vh;
+            top: -2vh;
+    }
+    .d-fitaVermelha-reservado::after
+    {
+        /*Content*/
+            content: "";
+
+        /*Position*/
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+
+        /*Size*/
+            width: 0;
+            height: 0;
+
+        /*Border*/
+            border-bottom: 2.9vw solid #F3F3F3;
+            border-left: 2.9vw solid transparent;
+            border-right: 2.9vw solid transparent;
+    }
+
+/*Botão fechar*/
+    .d-fitaVermelha-reservado img
+    {
+        /*Size*/
+            width: 3vw;
+
+        /*Position*/
+            position: relative;
+            left: 50%;
+            top: 20%;
+            transform: translateX(-50%);
+
+    }
+
+/*Imagem confirmação*/
+    .img-confirmacao-reservado
+    {
+        /*Size*/
+            width: 3.5vw;
+
+        /*Position*/
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+
+            margin-top: 4vh;
+            margin-bottom: 1vh;
+    }
+
+/*Titulo*/
+    .popup h1
+    {
+        /*Text*/
+            font-size: 1.8vw;
+            font-weight: 700;
+            text-align: center;
+    }
+
+/*Texto "Veja mais quartos"*/
+    .popup p
+    {
+        /*Text*/
+            font-size: 1.2vw;
+            text-align: center;      
+    }
+
+/*Botão ver mais*/
+    .a-verMais-reservado
+    {
+        /*Text*/
+            font-size: 1.5vw;
+            text-align: center;     
+
+        /*Border*/
+            border-width: 0.15vw;
+            border-style: solid;
+            border-color: black;
+            border-radius: 2vw;
+
+        /*Size*/
+            width: 25%;
+            height: 10%;
+
+        /*Position*/
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            margin-top: 2vh;
+            margin-bottom: 2vh;
+    }
+/*Coluna form + img*/
+    .d-dadosReserva-reservado
+    {
+        display: grid;
+        grid-template-columns: 1.5fr 2.5fr;
+    }
+/*Imagem Quarto*/
+    .d-quartoImg-reservado img
+    {
+        /*Size*/
+            width: 95%;
+    }
+
+/*Labels*/
+    #readReserva label
+    {
+        /*Text*/
+            font-weight: 700;
+            font-size: 1.2vw;
+
+        /*Position*/
+            margin-right: 0.5vw;
+    }
+
+/*Input*/
+    #readReserva input
+    {
+        /*Text*/
+            font-size: 1.2vw;
+
+        /*Background*/
+            background-color: transparent;
+
+        /*Position*/
+            margin-bottom: 1vh;
+    }
+    #n-pessoas_reserva
+    {
+        /*Size*/
+            width: 5vw;
+    }
+    #observacao_reserva
+    {
+        /*Size*/
+            width: 80%;
+            min-height: 10vh;
+        
+        /*Border*/
+            border-radius: 1vw;
+
+        /*Padding*/
+            padding-left: 1vw;
+            padding-right: 1vw;
+            padding-top: 1vh;
+            padding-bottom: 1vh;
+
+        /*Text*/
+            font-size: 1.5vw;
+    }
+
+    @media screen and (orientation: portrait) 
+    {
+        .popup 
+        {
+            /*Size*/
+                width: 90%;
+                height: 80%;
+        
+            /*Border*/
+                border-width: 0.2vw;
+                border-style: solid;
+                border-color: black;
+                border-radius: 2vw;
+        
+            /*Padding*/
+                padding-left: 4vw;
+                padding-right: 4vw;
+                padding-top: 4vh;
+                padding-bottom: 4vh;
+        }
+        
+        /*Fita vermelha*/
+            .d-fitaVermelha-reservado
+            {
+                /*Size*/
+                    width: 11vw;
+                    height: 17vw;
+            }
+            .d-fitaVermelha-reservado::after
+            {
+        
+                /*Border*/
+                    border-bottom: 5.8vw solid #F3F3F3;
+                    border-left: 5.8vw solid transparent;
+                    border-right: 5.8vw solid transparent;
+            }
+        
+        /*Botão fechar*/
+            .d-fitaVermelha-reservado img
+            {
+                /*Size*/
+                    width: 5vw;
+            }
+        
+        /*Imagem confirmação*/
+            .img-confirmacao-reservado
+            {
+                /*Size*/
+                    width: 7vw;
+        
+                    margin-top: 2vh;
+            }
+        
+        /*Titulo*/
+            .popup h1
+            {
+                /*Text*/
+                    font-size: 3vh;
+            }
+        
+        /*Texto "Veja mais quartos"*/
+            .popup p
+            {
+                /*Text*/
+                    font-size: 2vh;   
+            }
+        
+        /*Botão ver mais*/
+            .a-verMais-reservado
+            {
+                /*Text*/
+                    font-size: 2vh;
+                    text-align: center;     
+        
+                /*Border*/
+                    border-width: 0.15vw;
+                    border-style: solid;
+                    border-color: black;
+                    border-radius: 8vw;
+        
+                /*Size*/
+                    width: 35%;
+        
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+        
+                    margin-top: 2vh;
+                    margin-bottom: 4vh;
+            }
+        /*Coluna form + img*/
+            .d-dadosReserva-reservado
+            {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+        /*Imagem Quarto*/
+            .d-quartoImg-reservado img
+            {
+                /*Size*/
+                    width: 50%;
+
+                /*Position*/
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+
+                    margin-bottom: 2vh;
+            }
+
+        /*Grid Reservas*/
+            .d-reservaDados-reservado
+            {
+                grid-template-columns: 1fr;
+            }
+
+        /*Labels*/
+            #readReserva label
+            {
+                /*Text*/
+                    font-size: 2vh;
+            }
+        
+        /*Input*/
+            #readReserva input
+            {
+                /*Text*/
+                    font-size: 2vh;
+    
+            }
+            #observacao_reserva
+            {
+                /*Size*/
+                    width: 100%;
+                    min-height: 10vh;
+            
+                /*Text*/
+                    font-size: 2vh;
+            } 
+    }

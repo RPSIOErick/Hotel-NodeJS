@@ -1,0 +1,573 @@
+
+/*Botão para abrir o chat Ana*/
+
+    /*Botão Robo*/
+        .btnAna
+        {
+            /*Position*/
+                position: fixed;
+                right: 10vh;
+                bottom: 5vw;
+                z-index: 30;
+        }
+
+
+    /*Imagem do Robo*/
+        .btnAna-robo img
+        {
+            /*Size*/
+                width: 20vh;
+        }
+
+    /*Imagem Robo Animação*/
+        .btnAna img:hover
+        {
+            /*Size*/
+                width: 22vh;
+
+            /*Animation*/
+                transition: width 100ms;
+        }
+
+    /*Circulo Vermelho escrito 1*/
+        .btn1-ana
+        {
+            /*Background*/
+                background-color: #D64B4B;
+
+            /*Size*/
+                width: 8vh;
+                height: 8vh;
+
+            /*Border*/
+                border-radius: 50%;
+
+            /*Position*/
+                position: absolute;
+                right: -2vh;
+                top: -1vw;
+                z-index: 1;
+        }
+    /*Numero dentro do circulo vermelho*/
+        .btn1-ana text
+        {
+            /*Text*/
+                color: white;
+                font-size: 3vw;
+
+            /*Position*/
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+        }
+/*Fim do Botão para abrir o chat Ana*/
+
+/*Popup Chat*/
+
+    /*Configuração Padrao do Popup*/
+        #popup-ana
+        {
+            /*Position*/
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+
+            /*Visibility*/
+                visibility: hidden;
+                opacity: 0;
+        }
+        #popup-ana:target 
+        {
+            /*Visibility*/
+                visibility: visible;
+                opacity: 1;
+                z-index: 50;
+        }
+    /*Fim da Configuração Padrao*/
+
+    /*Popup (Posição)*/
+        #popup-ana .popup 
+        {
+            /*Size*/
+                width: 25%;
+                min-height: fit-content;
+
+            /*Position*/
+                position: absolute;
+                right: 5vh;
+                bottom: 0;
+        }
+        .popup-animation-open
+        {
+            animation-name: openPopUp;
+            animation-duration: 2s;
+        }
+
+    /*Header (parte onde tem a foto e o nome do bot)*/
+
+        /*Header*/
+            #popupAna-header
+            {
+                /*Background*/
+                    background-color: #2D627D;
+
+                /*Text*/
+                    color: white;
+
+                /*Border*/
+                    border-width: 0.8vh;
+                    border-style: solid;
+                    border-color: #BA8F20;
+                    border-bottom: 0;
+                    border-top-left-radius: 5vh;
+                    border-top-right-radius: 5vh;
+                
+                /*Position*/
+                    position: relative;
+
+                /*Size*/
+                    height: 10vh;
+            }
+
+        /*Colunas Tailwind Ana Header*/
+            .popupHeader-col1-ana
+            {
+                /*Size*/
+                    width: 20%;
+                    height: 9vh;
+
+                /*Position*/
+                    position: absolute;
+                    left: 0;
+
+                /*Border*/
+                    border-top-left-radius: 5vh; 
+            }
+
+            /*Foto de perfil Ana Header*/
+                #popupAna-header .profile-picture-ana
+                {
+                    /*Size*/
+                        width: 3vw;
+                                        
+                    /*Position*/
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                }
+            .popupHeader-col2-ana
+            {                
+                /*Position*/
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+
+                /*Size*/ 
+                    width: 60%;
+            }
+
+            /*Nome Ana Header*/
+                #popupAna-header h2
+                {
+                    /*Text*/
+                        font-weight: 800;
+                        font-size: 1.2vw;
+
+                }
+ 
+            /*Descrição Ana Header*/
+                #popupAna-header p
+                {
+                    /*Text*/
+                        font-size: 0.95vw;
+                }
+            .popupHeader-col3-ana
+            {
+                /*Size*/
+                    width: 20%;
+                    height: 9vh;
+
+                /*Position*/
+                    position: absolute;
+                    right: 0;
+
+                /*Border*/
+                    border-top-right-radius: 5vh;
+            }
+
+            /*Botão fechar Ana Header*/
+                .btnFechar-ana img
+                {
+                    /*Size*/
+                        width: 1.5vw;
+                                        
+                    /*Position*/
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);             
+                }
+    /*Fim do Header*/
+
+    /*Body*/     
+
+        /*Coluna Principal*/
+            #popupAna-body
+            {
+                /*Background*/
+                    background-color: white;
+
+                /*Border*/
+                    border-width: 0.8vh;
+                    border-style: solid;
+                    border-color: #BA8F20;
+                    border-top: 0;
+                    border-bottom: 0;
+
+                /*Size*/
+                    height: 20vw;
+
+                /*Overflow*/
+                    overflow-y: scroll;
+
+                /*Position*/
+                    margin-bottom: -0.5vw;
+            }
+
+        /*Mensagem Ana*/
+            .popupAna-mensagemCol-Ana
+            {
+                /*Background*/
+                    background-color: #B6C8D1;
+
+                /*Padding*/
+                    padding-top: 1vw;
+                    padding-bottom: 1vw;
+                    padding-left: 3vh;
+                    padding-right: 3vh;
+
+                /*Border*/
+                    border-radius: 4vh;
+
+                /*Margin*/
+                    margin-top: 1vw;
+                    margin-right: 10vh;
+                    margin-left: 1vh;
+                    margin-bottom: 1vw;
+
+                /*Position*/
+                    position: relative;
+                    display: block;
+
+                /*Text*/
+                    font-size: 1vw;
+                    text-align: justify;
+                    text-justify: inter-word;
+            }
+        /*Mensagem Usuario*/
+            .popupAna-mensagemCol-Usuario
+                {
+                    /*Background*/
+                        background-color: #A8DAF3;
+
+                    /*Padding*/
+                        padding-top: 1vw;
+                        padding-bottom: 1vw;
+                        padding-left: 3vh;
+                        padding-right: 3vh;
+
+                    /*Border*/
+                        border-radius: 4vh;
+
+                    /*Margin*/
+                        margin-right: 1vh;
+                        margin-left: 10vh;
+
+                    /*Position*/
+                        display: block;
+
+                    /*Text*/
+                        font-size: 1vw;
+                }
+
+/*Fim do Body*/
+
+/*Enviar Mensagem*/
+
+    /*Coluna Principal*/
+        #popupAna-enviarMensagem
+        {
+            position: relative;
+        }
+
+    /*Select Perguntas Ana*/
+        #popupAna-enviarMensagem select
+        {
+            /*Size*/
+                width: 75%;
+                height: 3vw;
+                padding-left: 1vh;
+
+            /*Border*/
+                border-left: 0.8vh solid #BA8F20;
+
+            /*Background*/
+                background-color: #B6C8D1;
+
+            /*Position*/
+                display: inline-block;
+
+            /*Text*/
+                font-size: 1vw;
+                
+        }
+
+    /*Botão Enviar Pergunta*/
+        #popupAna-enviarMensagem button
+        {
+            /*Size*/
+                width: 25%;
+                height: 3vw;  
+            
+            /*Background*/
+                background-color: #2D627D;
+
+            /*Position*/
+                position: absolute;
+                right: 0;
+                bottom: 0;
+
+            /*Border*/
+                border-right: 0.8vh solid #BA8F20;
+
+
+        }
+
+    /*Imagem botão enviar pergunta*/
+        #popupAna-enviarMensagem button img
+        {
+            /*Size*/
+                width: 35%;  
+                
+            /*Position*/
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+        }
+
+/*Fim do Enviar Mensagem*/
+
+@keyframes openPopUp
+{
+    from 
+    {
+        bottom: -50vw;
+    }
+    to 
+    {
+        bottom: 0;
+    }    
+}
+
+/*Celular*/
+
+@media screen and (orientation: portrait) 
+{
+    /*Botão para abrir o chat Ana*/
+
+        /*Botão Robo*/
+        .btnAna
+        {
+            /*Position*/
+                right: 5vw;
+                bottom: 3vh;
+        }
+
+
+    /*Imagem do Robo*/
+        .btnAna-robo img
+        {
+            /*Size*/
+                width: 20vw;
+        }
+
+    /*Imagem Robo Animação*/
+        .btnAna img:hover
+        {
+            /*Size*/
+                width: 22vw;
+        }
+
+    /*Circulo Vermelho escrito 1*/
+        .btn1-ana
+        {
+            /*Size*/
+                width: 8vw;
+                height: 8vw;
+
+            /*Position*/
+                right: -2vw;
+                top: -1vh;
+        }
+    /*Numero dentro do circulo vermelho*/
+        .btn1-ana text
+        {
+            /*Text*/
+                font-size: 2.5vh;
+        }
+    /*Fim do Botão para abrir o chat Ana*/
+
+    /*Popup Chat*/
+
+        /*Popup (Posição)*/
+            #popup-ana .popup 
+            {
+                /*Size*/
+                    width: 95%;
+                    min-height: fit-content;
+
+                /*Position*/
+                    position: absolute;
+                    right: 50%;
+                    bottom: 0;
+                    transform: translateX(50%);
+            }
+
+        /*Header (parte onde tem a foto e o nome do bot)*/
+
+                /*Foto de perfil Ana Header*/
+                    #popupAna-header .profile-picture-ana
+                    {
+                        /*Size*/
+                            width: 4vh;
+                    }
+
+                /*Nome Ana Header*/
+                    #popupAna-header h2
+                    {
+                        /*Text*/
+                            font-size: 2vh;
+                    }
+
+                /*Descrição Ana Header*/
+                    #popupAna-header p
+                    {
+                        /*Text*/
+                            font-size: 1.7vh;
+                    }
+
+                /*Botão fechar Ana Header*/
+                    .btnFechar-ana img
+                    {
+                        /*Size*/
+                            width: 2vh;         
+                    }
+        /*Fim do Header*/
+
+        /*Body*/     
+
+            /*Coluna Principal*/
+                #popupAna-body
+                {
+
+                    /*Size*/
+                        height: 60vh;
+
+                    /*Position*/
+                        margin-bottom: -0.5vh;
+                }
+
+            /*Mensagem Ana*/
+                .popupAna-mensagemCol-Ana
+                {
+                    /*Padding*/
+                        padding-top: 1vh;
+                        padding-bottom: 1vh;
+                        padding-left: 3vw;
+                        padding-right: 3vw;
+
+                    /*Border*/
+                        border-radius: 4vh;
+
+                    /*Margin*/
+                        margin-top: 2vh;
+                        margin-right: 12vw;
+                        margin-left: 2vw;
+                        margin-bottom: 2vh;
+
+                    /*Text*/
+                        font-size: 2vh;
+                }
+            /*Mensagem Usuario*/
+                .popupAna-mensagemCol-Usuario
+                    {
+
+                        /*Padding*/
+                            padding-top: 1vh;
+                            padding-bottom: 1vh;
+                            padding-left: 3vw;
+                            padding-right: 3vw;
+
+                        /*Border*/
+                            border-radius: 4vh;
+
+                        /*Margin*/
+                            margin-right: 2vw;
+                            margin-left: 12vw;
+
+                        /*Text*/
+                            font-size: 2vh;
+                    }
+
+        /*Fim do Body*/
+
+        /*Enviar Mensagem*/
+
+            /*Select Perguntas Ana*/
+                #popupAna-enviarMensagem select
+                {
+                    /*Size*/
+                        width: 75%;
+                        height: 7vh;
+                        padding-left: 1vh;
+
+                    /*Text*/
+                        font-size: 2vh;
+                        
+                }
+
+            /*Botão Enviar Pergunta*/
+                #popupAna-enviarMensagem button
+                {
+                    /*Size*/
+                        width: 25%;
+                        height: 7vh;  
+                    
+                    /*Background*/
+                        background-color: #2D627D;
+
+                    /*Position*/
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                }
+            /*Fim do Enviar Mensagem*/
+
+            @keyframes openPopUp
+            {
+                from 
+                {
+                    bottom: -50vh;
+                }
+                to 
+                {
+                    bottom: 0;
+                }    
+            }
+    }

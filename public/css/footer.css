@@ -1,0 +1,175 @@
+.d-principal-footer
+{
+    /*Background*/
+        background: linear-gradient(90deg, #194F6A 0%, rgba(31, 104, 141, 0.7) 100%);
+
+    /*Color*/
+        color: white;
+
+    /*Position*/
+        display: grid;
+}
+/*Titulos*/
+    .d-principal-footer h2
+    {
+        /*Text*/
+            text-align: center;
+            font-size: 2vw;
+
+        /*Position*/
+            margin-bottom: 2vh;
+    }
+/*Div Hotel, localização e contato*/
+    .d-hotel-footer,
+    .d-localizacao-footer,
+    .d-contato-footer
+    {
+        /*Padding*/
+            padding-left: 2vw;
+            padding-right: 2vw;
+            padding-top: 2vh;
+            padding-bottom: 2vh;
+    }
+
+/*Textos P*/
+    .d-hotel-footer p,
+    .d-localizacao-footer p,
+    .d-contato-footer p
+    {
+        /*Text*/
+            font-size: 1.5vw;
+            text-align: justify;
+    }
+
+/*Icones Contato*/
+    .d-iconesContato-foooter
+    {
+        display: grid;
+    }
+    .d-iconesContato-foooter img
+    {
+        /*Size*/
+            width: 5vw;
+    }
+
+/*Mapa*/    
+    .iframe-mapa-footer
+    {
+        /*Size*/
+            width: 95%;
+            height: 30vh;
+
+        /*Position*/
+            margin-bottom: 2vh;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+    }
+
+/*Div Copyright*/
+    .d-copyright-footer
+    {
+        /*Background*/
+            background-color: #214C63;
+
+        /*Text*/
+            text-align: center;
+            color: white;
+            font-size: 1.5vw;
+
+        /*Padding*/
+            padding-top: 2vh;
+            padding-bottom: 2vh;
+
+        /*Border*/
+            border-top: 0.3vw solid #CFA73F;
+    }
+
+@media screen and (orientation: portrait) 
+{
+    .d-principal-footer
+    {
+        display: block;
+    }
+    /*Titulos*/
+        .d-principal-footer h2
+        {
+            /*Text*/
+                font-size: 3vh;
+    
+            /*Position*/
+                margin-bottom: 2vh;
+        }
+    /*Div Hotel, localização e contato*/
+        .d-hotel-footer,
+        .d-localizacao-footer,
+        .d-contato-footer
+        {
+            /*Padding*/
+                padding-left: 2vw;
+                padding-right: 2vw;
+                padding-top: 2vh;
+                padding-bottom: 2vh;
+        }
+    
+    /*Textos P*/
+        .d-hotel-footer p,
+        .d-localizacao-footer p,
+        .d-contato-footer p
+        {
+            /*Text*/
+                font-size: 2.5vh;
+        }
+        .d-contato-footer p
+        {
+            text-align: center;
+        }
+    
+    /*Icones Contato*/
+        .d-iconesContato-foooter
+        {
+            display: inline-flex;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .d-iconesContato-foooter img
+        {
+            /*Size*/
+                width: 15vw;
+        }
+        #IconInstagram
+        {
+            margin-left: 4vw;
+            margin-right: 4vw;
+        }
+    
+    /*Mapa*/    
+        .iframe-mapa-footer
+        {
+            /*Size*/
+                width: 95%;
+                height: 30vh;
+    
+            /*Position*/
+                margin-bottom: 2vh;
+        }
+    
+    /*Div Copyright*/
+    .d-copyright-footer
+    {
+
+        /*Text*/
+            font-size: 2vh;
+
+        /*Padding*/
+            padding-top: 4vh;
+            padding-bottom: 4vh;
+            padding-left: 4vw;
+            padding-right: 4vw;
+
+        /*Border*/
+            border-top: 0.6vw solid #CFA73F;
+    }
+        
+}

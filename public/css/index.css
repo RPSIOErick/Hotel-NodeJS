@@ -1,0 +1,430 @@
+/* importando fonte */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+:root{
+    --nunito-sans: "Nunito Sans", sans-serif;
+    --azulFundo: #2D627D;
+    --azulNavbar: #003559;
+}
+
+/* definindo padrões */
+    .home
+    {
+        z-index: -1;
+    }
+    .home body{
+        font-family: var(--nunito-sans);
+    }
+
+    .home h1{
+        font-size: 1.79vw;
+    }
+
+    .home p{
+        font-size: 1.5vw;
+    }
+/* (fim) definindo padrões */
+
+/* Banner inicial: div do texto */
+#retangulo{
+    min-height: 20vh;
+    background-color: var(--azulFundo);
+}
+
+/* linha q separa o primeiro e o segundo container */
+#linha{       
+    border: 0.2vw solid #CFA73F;
+}
+
+/* Parte instalações */
+#container-instalacoes{
+    background: linear-gradient(to right, #24526A 100%, #316b88 87%);
+}
+
+/* Parte agendamentos */
+    #btn-agendar{
+        background-color: var(--azulNavbar);
+        border-color: #F1C247;
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+    }
+
+    #btn-agendar:hover{
+        background-color: #013050;
+        font-weight: 700;
+    }
+
+    #div-button{
+        background-color: var(--azulFundo);
+    }  
+/* (fim) Parte agendamentos */
+
+/*Localização*/
+    .d-localizacao-index
+    {
+        /*Background*/
+            background-color: #D9D9D9;
+
+        /*Border*/
+            border-top: 0.4vw solid #CFA73F;
+
+        /*Position*/
+            position: relative;
+
+        /*Padding*/ 
+            padding-top: 5%;
+    }
+
+/*Icone Div*/
+    .d-iconLocalizacao-index
+    {
+        /*Border*/
+            border-width: 0.3vw;
+            border-style: solid;
+            border-color: #CFA73F;
+            border-radius: 10vw;
+
+        /*Padding*/
+            padding-left: 1vw;
+            padding-right: 1vw;
+            padding-top: 2vh;
+            padding-bottom: 2vh;
+
+        /*Size*/
+            width: max-content;
+
+        /*Background*/
+            background-color: #D9D9D9;
+
+        /*Position*/
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -5vw;
+
+            
+    }
+
+/*Icone Imagem*/
+    .d-iconLocalizacao-index img
+    {
+        /*Size*/
+            width: 5vw;
+    }
+
+/*Titulo*/
+    .d-textoLocalizacao-index h2
+    {
+        /*Text*/
+            text-align: center;
+            font-weight: bold;
+            font-size: 2vw;
+
+        /*Position*/
+            margin-bottom: 2vh;
+    }
+/*Texto*/
+    .d-textoLocalizacao-index p
+    {
+        /*Text*/
+            text-align: justify;
+            width: 80%;
+            font-size: 1.5vw;
+
+        /*Position*/
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        
+    }
+/*Cards*/
+    .card
+    {
+        /*Size*/
+            width: 30vw;
+
+        /*Mouse*/
+            cursor: pointer;
+
+        /*Border*/
+            border-width: 0.3vw;
+            border-style: solid;
+            border-color: #CFA73F;
+
+        /*Postion*/
+            position: relative;
+    }
+
+/*Textos card*/
+    .card h2
+    {
+        /*Text*/
+            font-size: 2vw;
+        
+        /*Position*/
+            margin-top: 2vh;
+    }
+
+    .card p
+    {
+        /*Text*/
+            font-size: 1.5vw;
+        
+        /*Position*/
+            margin-top: 2vh;
+    }
+
+/*Icones Card Div*/
+    .d-iconesLocais-index
+    {
+        /*Border*/
+            border-width: 0.3vw;
+            border-style: solid;
+            border-color: #CFA73F;
+            border-radius: 50%;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            border-top: 0;
+
+        /*Padding*/
+            padding-left: 1vw;
+            padding-right: 1vw;
+            padding-top: 2vh;
+            padding-bottom: 2vh;
+
+        /*Background*/
+            background-color: #D9D9D9;
+
+        /*Postion*/
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+    }
+/*Icones Card img*/
+    .d-iconesLocais-index img
+    {
+        /*Size*/
+            width: 4vw;
+    }
+
+/*Onda svg*/
+    .svg-onda2-index
+    {
+        width: 100%;
+    }
+
+/* Responsividade Mobile */
+    @media screen and (orientation: portrait)
+    {        
+        /* padrao de fonte - mobile */
+            .home h1{
+                font-size: 2.3vh; 
+            }
+
+            .home p{
+                font-size: 3.7vw; 
+            }
+        /* (fim) padrao de fonte - mobile */
+        
+        /* PARTE BANNER */
+            #container-home{
+                max-height: 50vh;
+                z-index: -500;
+            }
+
+            /* img estrlas */
+            #estrelas{
+                width: 30%;
+                position: absolute; /* Define a posição como absoluta */
+                bottom: -50px; /* Move a estrela para cima */
+                z-index: 30; /* Define a ordem de empilhamento */
+            }
+
+            /* div texto do banner */
+                #retangulo{
+                    padding-top: 1.25rem;
+                    padding: 2vh 0; 
+                    display: flex;
+                    align-items: center;
+                }   
+
+                #retangulo p {
+                    padding: 0 6vw;
+                    text-align: center;
+                }
+            /* (fim) div texto do banner */
+        /* (fim) PARTE BANNER */
+
+        /* PARTE INSTALAÇÕES*/
+
+            /* div texto  */
+            #row-texto-instalacoes p, #row-texto-instalacoes h1{
+                padding: 0 2vw
+            }
+
+            /* ajustando tamanho e posicionamento do carrossel*/
+
+            /* ajustando tamanho e posicionamento dos rows */
+                #container-instalacoes .flex {
+                    flex-direction: column; 
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                }
+
+                #row-texto-instalacoes, #row-imgs-instalacoes{
+                    width: 100%;
+                }
+            /* (fim) ajustando tamanho e posicionamento dos rows */
+
+            /* ajustando carrossel*/
+                #row-imgs-instalacoes{
+                    margin: 0;
+                    padding-top: 0; 
+                    padding-bottom: 8vh;
+                }
+
+                #container-instalacoes #carousel {
+                    max-width: 70%; /* Define a largura do carousel*/
+                }
+            
+                #container-instalacoes #carousel .overflow-hidden.relative {
+                    height: 20vh; /* Ajusta a altura do carousel */
+                }
+            
+                #container-instalacoes #carousel .overflow-hidden.relative img {
+                    width: 100%; 
+                }
+
+                /* buttons e indicadores carrossel */
+                    #btn-anterior{
+                        margin-right: 60vw;
+                    }
+            
+                    #btn-proximo{
+                        margin-left: 60vw; 
+                    }
+            
+                    #indicadores-carrossel {
+                        top: -8vw;
+                        margin-top: 0vw;
+                        transform: rotate(90deg); /* Rotaciona os botões em 90 graus */
+                        float: left; 
+                        position: relative;
+                        left: 0px;    
+                        margin-left: 0px; 
+                    }
+            
+                    #indicador1{
+                        margin-right: -1.6vw;
+                    }
+                /* (fim) buttons e indicadores carrossel */
+            /* (fim) ajustando carrossel*/
+        /* (fim) PARTE INSTALAÇÕES*/
+
+        /* PARTE AGENDAMENTOS */
+            #col-1-agendamentos{
+                height: 40vh;
+            }
+
+            /* centralizando conteudo */
+            #div-icon-agenda, #div-button{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            /* ajustando icon agenda */
+                #s-div-icon-agenda{
+                    height: 10vh;
+                    width: 20%;
+                }
+
+                #s-div-icon-agenda img{
+                    height: 10vw;    
+                }
+            /* (fim) ajustando icon agenda */
+
+            #div-icon-fita{
+                display: none;
+            }
+
+            /* texto */
+                #div-text-agendamento h1{
+                    text-align: center;
+                }
+
+                #div-text-agendamento p{
+                    text-align: justify;
+                }
+            /* (fim) texto */
+          
+            /* button */
+                #div-button{
+                    align-items: start;
+                    padding: 0;
+                    margin: 0;
+                    height: 15vh;
+                }
+
+                #div-button button{
+                    width: 20vh;
+                    height: 5vh;
+                    font-size: 3.3vw; 
+                }
+
+                #s-div-button{
+                    height: 8vh;
+                    width: 50vw;
+                    top: -2vh;
+                    margin-top:0;   
+                }
+            /* (fim) button */
+        /* (fim) PARTE AGENDAMENTOS */
+        
+        /*Icone Div*/
+            .d-iconLocalizacao-index
+            {
+                display: none;
+            }
+
+        /*Titulo*/
+            .d-textoLocalizacao-index h2
+            {
+                /*Text*/
+                    font-size: 3vh;
+
+                /*Position*/
+                    margin-bottom: 3vh;
+            }
+        /*Grid Card*/
+            .d-cardLocal-index
+            {
+                display: block;
+            }
+
+        /*Card*/
+            .card
+            {
+                width: 90vw;
+            }
+
+        /*Textos card*/
+            .card h2
+            {
+                /*Text*/
+                    font-size: 3vh;
+                
+                /*Position*/
+                    margin-top: 2vh;
+            }
+
+            .card p
+            {
+                /*Text*/
+                    font-size: 2vh;
+                
+                /*Position*/
+                    margin-top: 2vh;
+            }
+    }
+/* (fim) Responsividade Mobile */

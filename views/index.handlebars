@@ -1,0 +1,307 @@
+<title>Home - Hotel Luxury Bela Vista</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!--AJAX -->
+
+<!--CSS anaBot-->
+    <link rel="stylesheet" type="text/css" href="../css/anaBot.css">
+    <link rel="stylesheet" type="text/css"href="../css/index.css">
+
+<!--JS que faz o chat ser em tempo real-->
+    <script src="../js/anaSyncChat.js"></script>
+    <script src="../js/openPopUp.js"></script>
+
+
+
+<body>
+    <div class="home">
+
+        <!-- Parte: Banner Inicial -->
+            <div class="max-auto w-full h-full">
+
+                <!-- Imagem de Fundo banner -->
+                    <div id="container-home" class="w-full h-screen relative overflow-hidden">
+                        <img src="../img/index/fundo-home.jpg" alt="Imagem de fundo" class="absolute inset-0 h-full w-full object-cover object-center">
+                        
+                        <img src="../img/index/wave.png" alt="" class="absolute inset-x-0 bottom-0 w-full flex justify-end items-end">
+                        
+                        <img id="estrelas" class="absolute z-20 inset-x-0 md:bottom-0 mx-auto md:w-48 lg:w-50 mb-12" src="../img/index/estrelas.png" alt="">
+                    </div>
+                <!-- (fim) Imagem de Fundo banner -->
+
+                <!-- div do texto do banner -->
+                    <div id="retangulo" class="box-border w-full px-52 mt-[-2px] z-10 relative">
+                        <p class="md:text-center text-gray-100">Seja bem-vindo ao Hotel Hotel, aqui você encontra diversos quartos 5 estrelas e um restaurante divino com tudo o que há de bom na cozinha internacional.</p>
+                    </div>
+                <!-- (fim) div do texto do banner -->
+    
+            </div> 
+        <!-- (fim) Parte: banner inicial -->
+
+        <div id="linha"></div>
+
+        <!-- Parte: Instalações -->
+            <div id="container-instalacoes" class="h-3/5 w-full">
+                
+                <div class="flex flex-row h-full">
+
+                    <!-- Row esquerdo - texto -->
+                        <div id="row-texto-instalacoes" class="w-1/2 text-white px-16 py-24 space-y-4 md:mx-4">
+                    
+                            <h1 class="font-bold" >INSTALAÇÕES</h1>
+                            <p class="text-justify">O nosso hotel se encontra neste momento com instalações da mais alta qualidade, incluindo quartos luxuosos, piscinas relaxantes, um restaurante de classe mundial e muito mais. Continue lendo para saber mais.</p>
+                        
+                        </div>
+                    <!-- (fim) Row esquerdo - texto -->
+
+                    <!-- Row direito - imgs -->
+                        <div id="row-imgs-instalacoes" class="w-1/2 py-20 md:mx-5">
+
+                            <!-- Carousel-->
+                                <div id="carousel" class="max-w-xl mx-auto border-2 rounded-md border-slate-200">
+
+                                    <div class="relative" data-carousel="static">
+                                        <!-- Carousel wrapper -->
+                                        <div class="overflow-hidden relative h-56 rounded-lg sm:h-64 xl:h-80 2xl:h-96">
+                                            <!-- Item 1 -->
+                                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                                <img src="../img/index/quarto1.png" class="block absolute top-1/2 left-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2" alt="...">
+                                            </div>
+                                            <!-- Item 2 -->
+                                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                                <img src="../img/index/restaurante.jpg" class="block absolute top-1/2 left-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2" alt="...">
+                                            </div>
+                                            <!-- Item 3 -->
+                                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                                <img src="../img/index/piscina.jpg" class="block absolute top-1/2 left-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2" alt="...">
+                                            </div>
+
+                                            <!-- Item 4 -->
+                                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                                <img src="../img/index/quadra.jpg" class="block absolute top-1/2 left-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2" alt="...">
+                                            </div>
+                                        </div> 
+
+                                        <!-- Indicador de slide -->
+                                            <div id="indicadores-carrossel" class="flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2">
+                                                <button id="indicador1" type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                                                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                                                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+                                                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="3"></button>
+                                            </div>
+                                        <!-- (fim) Indicador de slide -->
+                                        
+                                        <!-- Controle dos slide (icon seta) -->
+                                            <button type="button" class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
+                                                <span id="btn-anterior" class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                                                    <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                                                    <span class="hidden">Previous</span>
+                                                </span>
+                                            </button>
+                                            <button type="button" class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-next>
+                                                <span id="btn-proximo" class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                                                    <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                                                    <span class="hidden">Next</span>
+                                                </span>
+                                            </button>
+                                        <!-- (fim) Controle dos slide (icon seta) -->
+                                    </div>
+                                    <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+                                </div>
+                            <!-- fim carousel -->
+                        </div>
+                    <!-- Row direito - imgs -->
+                </div>
+            </div>
+        <!-- (fim) Parte: Instalações -->
+
+        <!-- Parte: Agendamentos -->
+            <div class="w-full flex flex-col">
+                <div id="col-1-agendamentos" class="h-1/2 bg-gray-200 p-10 px-10">
+
+                    <!-- icon de agenda -->
+                        <div id="div-icon-agenda" class="flex justify-center md:justify-start -mt-24">
+                            <div id="s-div-icon-agenda" class="rounded-full bg-gray-200 w-28 h-28 flex justify-center items-center">
+                                <img src="../img/index/agenda.png" class="h-16 object-cover" >
+                            </div>
+                        </div>
+                    <!-- (fim) icon de agenda -->
+
+                    <!-- icon fita -->
+                        <div id="div-icon-fita" class="sm:hidden md:flex justify-center md:justify-end -mt-16 mr-5">
+                            <img class="h-20" src="../img/index/fita.png">
+                        </div>
+                    <!-- (fim) icon fita -->
+
+                    <!-- texto agendamento -->
+                        <div id="div-text-agendamento" class="px-20 space-y-2">
+                            <h1 class="font-bold">AGENDAMENTOS</h1>
+                            <p>Para agendar uma das melhores reservas do Brasil, entre em contato conosco pelo número +55 11 95325-9340 
+                            ou visite-nos pessoalmente na Rua Carlos Sampaio, Bela Vista. </p>
+
+                            <p>E para uma experiencia mais rápida, você pode <b>agendar agora mesmo</b> pelo site!</p>
+                        </div>
+                    <!-- (fim) texto agendamento -->
+                </div>
+
+                <!-- div button agendar -->
+                    <div id="div-button" class="h-40 flex items-start justify-start px-24">
+                        <div id="s-div-button" class="bg-gray-200 h-20 w-2/5 rounded-b-3xl overflow-hidden mt-[-10px] z-20 relative">
+                            <div class="flex justify-center">
+                                <button id="btn-agendar" type="submit" class="block w-1/2 border-4 mt-4 py-2 rounded-2xl text-white font-semibold mb-2" onclick="window.location.href='/quartos'">AGENDAR</button>
+                            </div>
+                        </div>
+                    </div>
+                <!-- (fim) div button agendar -->
+            </div>
+        <!-- (fim) Parte: Agendamentos -->
+
+        <!--Parte: Localização-->
+            <div class="d-localizacao-index">
+
+                <!--Icone Localização-->
+                    <div class="d-iconLocalizacao-index">
+                        <img src="../img/index/localizacao.png" alt="Icone Localização">
+                    </div>
+
+                <!--Texto Localização-->
+                    <div class="d-textoLocalizacao-index">
+                        <h2>LOCALIZAÇÃO</h2>
+                        <p>Nosso hotel está estrategicamente localizado na rua Carlos Sampaio, no bairro Bela Vista. Essa região é conhecida por sua atmosfera vibrante e oferece fácil acesso às principais atrações da cidade. Nossos hóspedes desfrutam de conveniência e praticidade durante sua estadia no litoral norte de São Paulo.</p>
+                    </div>
+
+                <!--Cards Localização-->
+                    <div class="grid grid-cols-3 gap-2 p-6 d-cardLocal-index">
+
+                        <!--Centro Bela Vista-->
+                            <div class="card rounded overflow-hidden shadow-lg bg-white mb-5">
+                                
+                                <div class="d-iconesLocais-index">
+                                    <img src="../img/index/bagIcon.png" alt="Icone Centro da Cidade">
+                                </div>
+
+                                <div class="w-full">
+                                    <img src="../img/index/local1.png" alt="Foto do Centro de Bela Vista">
+                                </div>
+
+                                <div class="px-6 py-4">
+                                    <h2 class="font-bold text-xl mb-2">Centro de Bela Vista - SP</h2>
+                                    <p>Faça compras no centro de Bela Vista, uma charmosa área comercial à beira-mar.</p>
+                                </div>
+
+                            </div>
+                        <!--Fim do Centro Bela Vista-->
+
+                        <!--Praia da Portuguesa-->
+                            <div class="card rounded overflow-hidden shadow-lg bg-white mb-5">
+                                
+                                <div class="d-iconesLocais-index">
+                                    <img src="../img/index/beachIcon.png" alt="Icone Praia">
+                                </div>
+
+                                <div class="w-full">
+                                    <img src="../img/index/local2.png" alt="Foto da Praia da Portuguesa">
+                                </div>
+
+                                <div class="px-6 py-4">
+                                    <h2 class="font-bold text-xl mb-2">Praia da Portuguesa - SP</h2>
+                                    <p>Relaxe na Praia da Portuguesa, com águas calmas e areia dourada. Localizada em frente ao nosso hotel.</p>
+                                </div>
+
+                            </div>
+                        <!--Fim da Praia da Portuguesa-->
+
+                        <!--Balada XV-->
+                            <div class="card rounded overflow-hidden shadow-lg bg-white mb-5">
+
+                                <div class="d-iconesLocais-index">
+                                    <img src="../img/index/cheerIcon.png" alt="Icone Balada">
+                                </div>
+
+                                <div class="w-full">
+                                    <img src="../img/index/local3.png" alt="Foto da Balada XV">
+                                </div>
+
+                                <div class="px-6 py-4">
+                                    <h2 class="font-bold text-xl mb-2">Balada XV - SP</h2>
+                                    <p>Aproveite a animada noite de Balada XV, com música ao vivo, DJ, e muito mais.</p>
+                                </div>
+
+                            </div>
+                        <!--Fim da Balada XV-->
+
+                    </div>
+                <!--Fim dos Cards Localização-->
+                
+                <!--Onda-->
+                    <img src="../img/index/wave2.png" alt="Onda SVG" class="svg-onda2-index">
+                <!--Fim da Onda-->
+            </div>
+        <!--Fim da Parte Localização-->
+
+
+    </div>
+
+    <!--Botão Popup Ana-->
+        <div class="btnAna">
+            <!--Circulo vermelho 1-->
+                <div class="btn1-ana">
+                    <text>1</text>
+                </div>
+            <!--Botão Robo-->
+                <a href="#popup-ana" class="btnAna-robo" onclick="openPopUp()">
+                    <img src="../../img/ana.png" alt="Botão para abrir o chat bot">
+                </a>
+        </div>
+    <!--Fim do Botão Popup Ana-->
+
+    <!--Popup Ana-->
+        <div id="popup-ana" class="overlay">
+            <div class="popup">
+
+                <!--Parte de cima com nome e foto-->
+                    <div id="popupAna-header" class="grid grid-cols-3">
+
+                        <div class="popupHeader-col1-ana">
+                            <img src="../img/ana.png" alt="Foto de Perfil do ChatBot" class="profile-picture-ana">
+                        </div>
+
+                        <div class="popupHeader-col2-ana">
+                            <h2>Ana</h2>
+                            <p>Assistente Virtual do Hotel Hotel</p>
+                        </div>
+
+                        <div class="popupHeader-col3-ana">
+                            <a href="/" class="btnFechar-ana" onclick="closePopUp()">
+                                <img src="../img/btn-fechar.png" alt="Botão Fechar ChatBot">
+                            </a>
+                        </div>
+
+
+                        
+                    </div>
+
+                <!--Parte do meio com as mensagens-->
+                    <div id="popupAna-body">
+
+                        <div class="popupAna-mensagemCol-Ana">
+                            <p class="popupAna-mensagem-ana">Olá, eu sou a Ana, a assistente virtual do Hotel Luxury Bela Vista, como posso te ajudar?</p>
+                        </div>
+
+                    </div>
+
+                <!--Parte final com as perguntas-->
+                    <form id="popupAna-enviarMensagem" >
+                        <select name="anaQuestions" id="anaQuestions">
+                            <option value="Onde fica localizado Hotel Hotel?">                      Onde fica localizado Hotel Hotel?</option>
+                            <option value="Qual o horario de funcionamento da recepção do Hotel?">  Qual o horario de funcionamento da recepção do Hotel?</option>
+                            <option value="Quais são os tipos de quarto disponiveis?">              Quais são os tipos de quarto disponiveis?</option>
+                            <option value="Como faço minha reserva?">                               Como faço minha reserva?</option>
+                            <option value="Como faço para falar com o hotel?">                      Como faço para falar com o hotel?</option>
+                        </select>
+            
+                        <button type="submit"><img src="../img/btn-enviar.png" alt="" srcset=""></button>
+                    </form>
+            </div>
+        </div>
+    <!--Fim do Popup Ana-->
+</body>

@@ -1,0 +1,103 @@
+<title>Login - Hotel Luxury Bela Vista</title>
+<link rel="stylesheet" href="../css/cadastrar.css">
+
+<body>
+
+    <!--Grid 2 colunas-->
+        <div class="d-grid-login">
+
+            <!--Coluna Imagem-->
+                <div id="d-imgHotelExt-login">
+                    <img src="../img/cadastrar/imagem-hotel.png" class="" alt="Foto da parte externa do Hotel">
+                </div>
+            <!--Fim da Coluna Imagem-->
+
+            <!--Coluna Formulario-->
+                <div class="d-colFormulario-login">
+                        
+                    <!--Formulario Login-->
+                        <form id="loginUser" action="/usuario/cadastrar" method="POST">
+                            <div class="d-fitaVermelha-login"></div>
+
+                            <!--Titulo-->
+                                <h1>Registre-se</h1>
+
+                                <!--Mensagens de erro caso haja-->
+                                <ul style="text-align: center;">
+
+                                    {{#if erros}}
+                                        {{#each erros}}
+                                            <li>{{mensagem}}</li>
+                                        {{/each}}
+                                    {{/if}}
+
+                                </ul>
+
+                            <!--Campo Nome-->
+                                <div class="d-grid-2cols d-input-login">
+
+                                    <div class="d-labelIcon-login">
+                                        <img src="../img/cadastrar/perfil.png" alt="Icone do campo nome">
+                                    </div>
+
+                                    <div class="d-campo-login">
+                                        <input type="text" name="Nome" id="name_user" placeholder="Digite seu nome">
+                                    </div>
+                                    
+                                </div>
+
+                            <!--Campo Email-->
+                                <div class="d-grid-2cols d-input-login">
+
+                                    <div class="d-labelIcon-login">
+                                        <img src="../img/cadastrar/arroba.png" alt="Icone do campo email">
+                                    </div>
+
+                                    <div class="d-campo-login">
+                                        <input type="Email" name="Email" id="email_user" placeholder="Digite seu email">
+                                    </div>
+
+                                </div>
+                            
+                            <!--Campo Senha-->
+                                <div class="d-grid-2cols d-input-login">
+
+                                    <div class="d-labelIcon-login">
+                                        <img src="../img/cadastrar/cadeado.png" alt="Icone do campo senha">
+                                    </div>
+
+                                    <div class="d-campo-login">
+                                        <input type="password" name="Senha1" id="senha_user" placeholder="Digite sua senha" minlength="6">
+                                    </div>
+                                    
+                                    
+                                </div>
+
+                            <!--Campo Confirmar Senha-->
+                                <div class="d-grid-2cols d-input-login">
+
+                                    <div class="d-labelIcon-login">
+                                        <img src="../img/cadastrar/cadeado.png" alt="Icone do campo senha">
+                                    </div>
+
+                                    <div class="d-campo-login">
+                                        <input type="password" name="Senha2" id="senha_user" placeholder="Confirme sua senha" minlength="6">
+                                    </div>
+                                    
+                                    
+                                </div>
+
+
+                            <!--Texto login-->
+                                <p>Já possui cadastro? Então <a href="/login">acesse sua conta</a></p>
+
+                            <button type="submit">CADASTRAR</button>
+                        </form>
+                    <!--Fim do Formulario login-->
+
+                </div>
+            <!--Fim da Coluna Formulario-->
+        </div>
+    <!--Fim da Grid 2 colunas-->
+
+</body>
