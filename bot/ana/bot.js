@@ -15,12 +15,12 @@ const { ActivityHandler } = require('botbuilder');
 // Repostas as perguntas
     const answers =
     [
-        "O hotel tem apenas uma unidade, localizada na Rua  Rua Carlos Sampaio, 100, no bairro da Bela Vista, em São Paulo, SP.",
+        "O hotel tem apenas uma unidade, localizada na Rua Carlos Sampaio, 100, no bairro da Bela Vista, em São Paulo, SP.",
         "A recepção funciona das 08h as 19h todos os dias.",
         `Os tipos de quarto disponiveis são: 
         <br><br>
             Quarto Luxo: 600,00/Noite <br>
-            Descrição: Observe e se agracie em vistas maravilhosas que o Hotel Hotel disponibiliza. Sempre pensando em você!<br><br>
+            Descrição: Observe e se agracie em vistas maravilhosas que o Hotel Luxury Bela Vista disponibiliza. Sempre pensando em você!<br><br>
 
             Quarto de Casal: 400,00/Noite <br>
             Descrição: Venha passar seus momentos mais românticos nos quartos para casais. Sinta o conforto máximo!<br><br>

@@ -156,6 +156,8 @@
             padding-top: 2vh;
             padding-bottom: 2vh;
 
+            z-index: 2;
+
     }
 
     /*Links Navbar*/
