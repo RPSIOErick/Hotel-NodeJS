@@ -12,9 +12,7 @@
     // Home
         app.get("/", function(req, res)
         {
-            res.render("index", {
-                Usuario: req.user
-            });
+            res.render("index");
         })
 
     // Rotas do Bot
@@ -66,28 +64,193 @@
     // Reservar
 
         // Luxo
-            app.get("/reservar_luxo", function(req, res)
-            {
-                res.render("reservar_luxo")
-            })
+               
+        app.get('/reservar_luxo', checkNotAuthenticated, async (req, res) => {
+            if (req.isAuthenticated()) {
+                const UsuarioLog = req.user;
+
+                const Data = await Cliente.findOne({
+                    where: {
+                        'Email': req.user.Email
+                    }
+                })
+
+                if(Data.Email === UsuarioLog.Email)
+                {
+
+                    console.log('ID do usuário logado:', UsuarioLog.id);
+
+                    res.render("reservar_luxo", {UsuarioLog: UsuarioLog.id})
+                }
+
+                // res.render('reservar_luxo', { Cliente: id });
+            } else {
+                req.flash('success_msg', "Entre na sua conta!")
+                res.redirect('/login');
+            }
+        });
+
 
         // Casal
-            app.get("/reservar_casal", function(req, res)
-            {
-                res.render("reservar_casal")
-            })
+
+            app.get('/reservar_casal', checkNotAuthenticated, async (req, res) => {
+                if (req.isAuthenticated()) {
+                    const UsuarioLog = req.user;
+
+                    const Data = await Cliente.findOne({
+                        where: {
+                            'Email': req.user.Email
+                        }
+                    })
+
+                    if(Data.Email === UsuarioLog.Email)
+                    {
+
+                        console.log('ID do usuário logado:', UsuarioLog.id);
+
+                        res.render("reservar_casal", {UsuarioLog: UsuarioLog.id})
+                    }
+
+                } else {
+                    req.flash('success_msg', "Entre na sua conta!")
+                    res.redirect('/login');
+                }
+            });
+
 
         // Familia
-            app.get("/reservar_familia", function(req, res)
-            {
-                res.render("reservar_familia")
-            })
+
+            app.get('/reservar_familia', checkNotAuthenticated, async (req, res) => {
+                if (req.isAuthenticated()) {
+                    const UsuarioLog = req.user;
+
+                    const Data = await Cliente.findOne({
+                        where: {
+                            'Email': req.user.Email
+                        }
+                    })
+
+                    if(Data.Email === UsuarioLog.Email)
+                    {
+
+                        console.log('ID do usuário logado:', UsuarioLog.id);
+
+                        res.render("reservar_familia", {UsuarioLog: UsuarioLog.id})
+                    }
+
+                } else {
+                    req.flash('success_msg', "Entre na sua conta!")
+                    res.redirect('/login');
+                }
+            });
+
 
     // Fim do Reservar
 
 // Fim da Configuração de Rotas (Front-End)
 
 // Configuração de Rotas (Back-End)
+        const Reserva = require('../models/tb_Reserva.js');        
+
+        app.post('/usuarios/reservar_quarto', (req, res) => {
+
+            const UsuarioLog = req.user;
+
+            if(UsuarioLog)
+            {
+                const Res = Reserva.create({
+                    id_user: req.body.id,
+                    Quarto: req.body.Quarto,
+                    Qntd_Pessoas: req.body.Qntd_Pessoas,
+                    Chegada: req.body.Chegada,
+                    Partida: req.body.Partida,
+                    Valor: req.body.Valor,
+                    Observacao: req.body.Observacao
+                })
+                .then(Reserva => {
+                    req.flash('success_msg', "Reserva realizada com sucesso!")
+                    res.redirect('/usuario/minha_conta')
+                })
+                .catch(error => {
+                    console.error("Erro ao criar reserva:", error);
+                });
+                
+            }
+            else 
+            {
+                res.send("Entre com sua conta!")
+            }
+
+        });
+
+        app.post('/usuario/editar_reserva', async(req, res) => {
+            const UsuarioLog = req.user;
+
+            const IdReserva = await req.body.id
+
+            if(UsuarioLog)
+                {
+
+                    if (IdReserva){
+
+                        Reserva.update({
+                            Qntd_Pessoas: req.body.num_pessoas_res,
+                            Chegada: req.body.chegada_res,
+                            Partida: req.body.partida_res,
+                            Observacao: req.body.observacao_res
+                        }, {
+                            where: {
+                                id: IdReserva
+                            }
+                        })
+                        .then(() => {
+                            res.redirect('/usuario/minha_conta')
+                        })
+                        .catch((error) => {
+                            res.send("Erro: " + error)
+                        })
+
+
+                    }                    
+
+                }
+                else {
+                    res.send("Precisa estar logado!")
+                }
+        })
+
+        app.post('/usuario/excluir_res', async (req, res) => {
+
+            const UsuarioLog = req.user;
+
+            const IdReserva = await req.body.id
+
+            if(UsuarioLog)
+                {
+
+                    if (IdReserva){
+
+                        Reserva.destroy({
+                            where: {
+                                id: IdReserva
+                            }
+                        })
+                        .then(() => {
+                            res.redirect('/usuario/minha_conta')
+                        })
+                        .catch((error) => {
+                            res.send("Erro: " + error)
+                        })
+
+
+                    }                    
+
+                }
+                else {
+                    res.send("Precisa estar logado!")
+                }
+
+        })
 
     // Import da Model Cliente
     const Cliente = require('../models/tb_Cliente.js');
@@ -165,10 +328,23 @@
     }));
 
     // Minha conta
-    app.get('/usuario/minha_conta', checkNotAuthenticated, (req, res) => {
+    app.get('/usuario/minha_conta', checkNotAuthenticated, async (req, res) => {
         if (req.isAuthenticated()) {
             const { Nome, Email, Senha } = req.user;
-            res.render('minhaConta', { Cliente: { Nome, Email, Senha} });
+
+            const Res = await Reserva.findAll({
+                where: {
+                    id: req.user.id
+                }
+            });
+
+            const Dados = {
+                Cliente: {Nome, Email, Senha },
+                Reserva: Res
+            }
+            
+            res.render('minhaConta', Dados);
+
         } else {
             res.redirect('/login');
         }

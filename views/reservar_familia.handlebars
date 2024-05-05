@@ -46,11 +46,13 @@
                     <img src="../img/reservar/Marcador.svg" class="float-right" id="Marcador" alt="Marcador de Página">
 
                     {{!-- Formulário de Reserva --}}
-                    <form id="ReservarForm" class="rounded-[1vw] border-2 border-black" method="POST" action="">
+                    <form id="ReservarForm" class="rounded-[1vw] border-2 border-black" method="POST" action="/usuarios/reservar_quarto">
 
+                        {{!-- ID DO CLIENTE --}}
+                        <input type="text" name="id" id="id" value="{{UsuarioLog}}" hidden>
 
                         {{!-- Div: Nome do Quarto --}}
-                        <input type="hidden" name="Nome_do_Quarto" value="Quarto de Família">
+                        <input type="text" name="Quarto" value="Quarto Família" hidden>
 
                         {{!-- Div: Datas --}}
                         <div class="form-group" id="datas">
@@ -86,10 +88,10 @@
                                 
                                 {{!-- Preço Total --}}
                                 
-                                <p> Total: R$00,00 </p>
+                                <p> Total: R$3.500,00 </p>
 
                                 {{!-- Valor da Reserva --}}
-                                <input type="hidden" name="Valor" value="">
+                                <input type="hidden" name="Valor" value="3.500">
 
                                 {{!-- Botão de Confirmação --}}
                                 <button type="submit" id="ConfirmarBtn" class="border-2 p-4 mt-3 rounded-full"> Confirmar Reserva </button>

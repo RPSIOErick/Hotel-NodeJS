@@ -2,7 +2,7 @@
 const Sequelize = require('sequelize')
 
 // Conexão com o banco de dados
-const sequelize = new Sequelize('BD_HOTEL', 'postgres', '1234', {
+const sequelize = new Sequelize('BD_HOTEL', 'postgres', 'Edward123', {
     host: 'localhost',
     dialect: 'postgres'
 })

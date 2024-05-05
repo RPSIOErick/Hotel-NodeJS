@@ -5,23 +5,30 @@ const { DataTypes } = require("sequelize");
 // Criação da Model Reserva
 const Reserva = sq.define(
     "Reserva", {
-        Nome_Do_Quarto: {
+        id_user: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: false,
+            autoIncrement: false,
+            field: 'id'
+        },
+        Quarto: {
             type: DataTypes.STRING,
             allowNull: false,
-            primaryKey: false
-        },
+            primaryKey: false,
+        },        
         Qntd_Pessoas: {
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: false
         },
         Chegada: {
-            type: DataTypes.DATE,
+            type: DataTypes.DATEONLY,
             allowNull: false,
             primaryKey: false
         },
         Partida: {
-            type: DataTypes.DATE,
+            type: DataTypes.DATEONLY,
             allowNull: false,
             primaryKey: false
         },

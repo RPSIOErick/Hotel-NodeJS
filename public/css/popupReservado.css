@@ -2,42 +2,21 @@
 #popup-reservado
 {
     /*Position*/
-        position: fixed;
-        top: 0;
-        bottom: -1px;
-        left: 0;
-        right: 0;
-
-    /*Background*/
-        background: rgb(0, 0, 0, 0.5);
-
-    /*Visibility*/
-        visibility: hidden;
-        opacity: 0;
-        z-index: 20;
-
-}
-#popup-reservado:target
-{
-    /*Visibility*/
-        visibility: visible;
-        opacity: 1;
-        z-index: 20;
-}
-#popup-reservado .popup 
-{
-    /*Size*/
-        width: 65%;
-        height: 80%;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, 0%);
 
     /*Background*/
         background: #F3F3F3;
 
-    /*Position*/
-        position: relative;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+    /*Visibility*/
+        visibility: visible;
+        opacity: 1;
+
+    /*Size*/
+        width: 65%;
+        height: 80%;
 
     /*Border*/
         border-width: 0.1vw;
@@ -50,6 +29,11 @@
         padding-right: 2vw;
         padding-top: 2vh;
         padding-bottom: 2vh;
+
+    /* Margin */
+        margin-top: 4vw;
+        margin-bottom: 4vw;
+
 }
 
 /*Fita vermelha*/
