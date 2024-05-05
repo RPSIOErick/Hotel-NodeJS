@@ -32,6 +32,7 @@ const { express, handlebars, bodyParser, path, bcrypt, session, flash, passport 
     
     app.engine('handlebars', handlebars({
         defaultLayout: 'main',
+
     }))
 
     // Utilização da View Engine

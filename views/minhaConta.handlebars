@@ -13,7 +13,7 @@
                     <h2 class="text-white text-center">Dados Pessoais</h2>
                     <h2  class="text-white text-center">Minhas Reservas</h2>
                     <div>
-                        <a href=""  class="text-white text-center">Voltar para a Home</a>
+                        <a href="" class="text-white text-center">Voltar para a Home</a>
                     </div>
                     
                 </div>
@@ -27,30 +27,48 @@
 
                             <h2>Dados Pessoais</h2>
 
+                            <ul style="text-align: center;">
+
+                                {{#if messages.success_msg}}
+                                    <li >{{messages.success_msg}}</li>
+                                {{/if}}
+
+                                {{#if messages.error_msg}}
+                                    <li >{{messages.error_msg}}</li>
+                                {{/if}}
+
+                            </ul>
+
+
                             <!--Campo Nome-->
-                                <form action="" id="updateNomeUser" class="d-camposDadosPessoais-mC">
-                                    <label for="nome_user">Nome:</label>
-                                    <input type="name" name="nome_user" id="nome_user" value="NOME">
+                                <form action="/usuario/alterar" id="updateUser" method="POST">
+                                    <div class="d-camposDadosPessoais-mC">
+                                        <label for="nome_user">Nome:</label>
+                                        <input type="name" name="nome_user" id="nome_user" value="{{Cliente.Nome}}" required>
+                                    </div>
 
-                                    <button type="submit">
-                                        <img src="../img/minhaConta/editar.png" alt="Botão Editar Nome do Usuario">
-                                    </button>
-                                </form>
-                                
+                                <!--Campo Email-->
+                                    <div id="d-email-mC" class="d-camposDadosPessoais-mC">
+                                        <label for="email_user">Email:</label>
+                                        <input type="email" name="Email" id="email_user" value="{{Cliente.Email}}" readonly>
+                                        <img src="../img/minhaConta/cadeado.png" alt="Icone de Cadeado">
+                                    </div>
 
-                            <!--Campo Email-->
-                                <div id="d-email-mC" class="d-camposDadosPessoais-mC">
-                                    <label for="email_user">Email:</label>
-                                    <input type="email" name="email_user" id="email_user" disabled value="EMAIL">
-                                    <img src="../img/minhaConta/cadeado.png" alt="Icone de Cadeado">
-                                </div>
+                                    <!--Campo senha atual-->
+                                    <div id="updaterSenhaUser" class="d-camposDadosPessoais-mC">
+                                        <label for="senha_user">Senha Atual:</label>
+                                        <input type="password" name="senha_atual_user" id="senha_user" required>
 
-                            <!--Campo senha-->
-                                <form action="" id="updaterSenhaUser" class="d-camposDadosPessoais-mC">
-                                    <label for="senha_user">Nova Senha:</label>
-                                    <input type="password" name="senha_user" id="senha_user" value="SENHA?">
+                                        
+                                    </div>
 
-                                    <button type="submit" class="btn-azul-mC text-white">Alterar Senha</button>
+                                <!--Campo senha nova-->
+                                    <div id="updaterSenhaUser" class="d-camposDadosPessoais-mC">
+                                        <label for="senha_user">Nova Senha:</label>
+                                        <input type="password" name="senha_user" id="senha_user" value="" required>
+
+                                        <button type="submit" class="btn-azul-mC text-white">Alterar</button>
+                                    </div>
                                 </form>
                         </div>
                     <!--Fim dos Dados Pessoais-->

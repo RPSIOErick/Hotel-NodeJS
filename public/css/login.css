@@ -1,443 +1,442 @@
 /*Body*/
-    body
-    {
-        background-color: #2D627D;
-    }
+body
+{
+    background-color: #2D627D;
+}
 /*Grid da Pagina*/
-    .d-grid-login
-    {
-        /*Position*/
-            display: grid;
-            grid-template-columns:  1.2fr 0.8fr;
-    }
+.d-grid-login
+{
+    /*Position*/
+        display: grid;
+        grid-template-columns:  1.2fr 0.8fr;
+}
 
-    /*Parte esqueda*/
-        #d-imgHotelExt-login
+/*Parte esqueda*/
+    #d-imgHotelExt-login
+    {
+        /*Background*/
+            background-color: #2D627D;
+
+        /*Position*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+    }
+    #d-imgHotelExt-login img
+    {
+        height: 75%;
+    }
+/*Fim da Parte esqueda*/
+
+/*Parte Direita - Formulario*/
+
+    /*Coluna Principal*/
+        .d-colFormulario-login
         {
             /*Background*/
                 background-color: #2D627D;
 
+                width: 100%;
+                height: 100%;
+
+                
             /*Position*/
                 display: flex;
                 justify-content: center;
                 align-items: center;
 
         }
-        #d-imgHotelExt-login img
+    
+    /*Formulario - Parte branca*/
+        #loginUser
         {
-            height: 75%;
+            /*Background*/
+                background-color: white;         
+
+            /*Position*/
+                position: relative;
+                margin-left: 2vw;
+                margin-right: 2vw;
+                margin-top: 4vh;
+                margin-bottom: 4vh;
+
+            /*Border*/
+                border-width: 0.2vw;
+                border-style: solid;
+                border-color: #F2B208;
+                border-radius: 1vw;
+
+            /*Padding*/
+                padding-left: 3vw;
+                padding-right: 3vw;
+                padding-top: 2vh;
+                padding-bottom: 2vh;
+
+
         }
-    /*Fim da Parte esqueda*/
+
+    /*Fita Vermelha*/
+        .d-fitaVermelha-login
+        {
+            /*Background*/
+                background-color: #C83E3E;
+
+            /*Size*/
+                width: 4vw;
+                height: 5.5vw;
+
+            /*Position*/
+                position: absolute;
+                right: 2vh;
+                top: -2vh;
+        }
+        .d-fitaVermelha-login::after
+        {
+            /*Content*/
+                content: "";
+
+            /*Position*/
+                position: absolute;
+                left: 0;
+                bottom: -1px;
+
+            /*Size*/
+                width: 0;
+                height: 0;
+
+            /*Border*/
+                border-bottom: 2vw solid #F3F3F3;
+                border-left: 2vw solid transparent;
+                border-right: 2vw solid transparent;
+        }
+
+    /*Titulo*/
+        #loginUser h1
+        {
+            /*Text*/
+                text-align: center;
+                font-size: 2.5vw;
+                padding-top: 8vh;
+        }
+
+    /*Div principal*/
+        .d-input-login
+        {
+            /*Border*/
+                border-width: 0.15vw;
+                border-style: solid;
+                border-color: black;
+                border-radius: 0.6vw;
+
+            /*Position*/
+                width: 26vw;
+                height: 4vw;
+                margin-top: 5vh;
+
+            /*Position*/
+                display: flex;
+                align-items: flex-start;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+
+                
+            /*Background*/
+                background-color: #EEF0F1;
+        }
+
+    /*Div Icone*/
+        .d-labelIcon-login
+        {
+            /*Size*/
+                width: 5vw;
+                height: 3.7vw;
+
+            /*Border*/
+                border-radius: 0.6vw;
+                border-right: 0.15vw solid black;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+
+            /*Background*/
+                background-color: #D9D9D9;
+                
+        }
+
+    /*Icone*/
+        .d-labelIcon-login img
+        {
+            /*Size*/
+                width: 2vw;
+
+            /*Position*/
+                position: relative;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+        }
+
+    /*Div Input*/
+
+    /*Input*/
+        .d-campo-login input
+        {
+            /*Size*/
+                width: 22vw;
+                height: 3.5vw;
+
+            /*Background*/
+                background-color: #EEF0F1;
+
+            /*Text*/
+                font-size: 1.5vw;
+
+            /*Padding*/
+                padding-left: 1vw;
+                padding-right: 1vw;
+                padding-top: 1vh;
+                padding-bottom: 1vh; 
+
+             /*Border*/
+                border-radius: 0.6vw;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+        }
+
+    /*Mensagem cadastro (p)*/
+        #loginUser p
+        {
+            /*Text*/
+                text-align: center;
+                font-size: 1.15vw;
+                font-family: "Nova Square", sans-serif;
+
+            /*Position*/
+                margin-top: 2vh;
+        }
+        #loginUser a
+        {
+            /*Text*/
+                text-align: center;
+                font-size: 1.15vw;
+                font-family: "Nova Square", sans-serif;
+                text-decoration: underline;
+
+            /*Position*/
+                margin-top: 2vh;
+
+        }
+    
+    /*Botão*/
+        #loginUser button
+        {
+            /*Background*/
+                background-color: #2E536B;
+
+            /*Text*/
+                text-align: center;
+                font-size: 2vw;
+                font-family: "Nova Square", sans-serif;
+                color: white;
+
+            /*Border*/
+                border-width: 0.2vw;
+                border-style: solid;
+                border-color: #F1C247;
+                border-radius: 2vw;
+
+            /*Padding*/
+                padding-left: 7vw;
+                padding-right: 7vw;
+                padding-top: 2vh;
+                padding-bottom: 2vh;
+
+            /*Position*/
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-top: 5vh;
+                margin-bottom: 5vh;
+
+            }
+/*Fim da parte direita*/
+
+@media screen and (orientation: portrait) 
+{
+    /*Grid da Pagina*/
+        .d-grid-login
+        {
+            /*Position*/
+                display: block;
+        }
+
+    /*Parte esqueda*/
+        #d-imgHotelExt-login
+        {
+            display: none;
+        }
 
     /*Parte Direita - Formulario*/
 
-        /*Coluna Principal*/
-            .d-colFormulario-login
-            {
-                /*Background*/
-                    background-color: #2D627D;
+    /*Coluna Principal*/
+        .d-colFormulario-login
+        {
+            background-color: #2D627D;
+            height: fit-content;
+        }
+    
+    /*Formulario - Parte branca*/
+        #loginUser
+        {      
+            /*Position*/
+                position: relative;
+                margin-left: 2vw;
+                margin-right: 2vw;
+                margin-top: 4vh;
+                margin-bottom: 4vh;
 
-                    width: 100%;
-                    height: 100%;
+            /*Border*/
+                border-width: 0.5vw;
+                border-style: solid;
+                border-color: #F2B208;
+                border-radius: 1vw;
+        }
 
-                    
-                /*Position*/
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    z-index: -1;
+    /*Fita Vermelha*/
+        .d-fitaVermelha-login
+        {
 
-            }
-        
-        /*Formulario - Parte branca*/
-            #loginUser
-            {
-                /*Background*/
-                    background-color: white;         
+            /*Size*/
+                width: 8vw;
+                height: 11vw;
 
-                /*Position*/
-                    position: relative;
-                    margin-left: 2vw;
-                    margin-right: 2vw;
-                    margin-top: 4vh;
-                    margin-bottom: 4vh;
+        }
+        .d-fitaVermelha-login::after
+        {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            border-bottom: 4vw solid #F3F3F3;
+            border-left: 4vw solid transparent;
+            border-right: 4vw solid transparent;
+        }
 
-                /*Border*/
-                    border-width: 0.2vw;
-                    border-style: solid;
-                    border-color: #F2B208;
-                    border-radius: 1vw;
+    /*Titulo*/
+        #loginUser h1
+        {
+            /*Text*/
+                font-size: 3vh;
+                padding-top: 4vh;
+        }
 
-                /*Padding*/
-                    padding-left: 3vw;
-                    padding-right: 3vw;
-                    padding-top: 2vh;
-                    padding-bottom: 2vh;
+    /*Div principal*/
+        .d-input-login
+        {
+            /*Border*/
+                border-width: 0.25vw;
+                border-style: solid;
+                border-color: black;
+                border-radius: 3vw;
 
+            /*Position*/
+                width: 90%;
+                height: 7vh;
+                margin-top: 5vh;
 
-            }
+        }
 
-        /*Fita Vermelha*/
-            .d-fitaVermelha-login
-            {
-                /*Background*/
-                    background-color: #C83E3E;
+    /*Div Icone*/
+        .d-labelIcon-login
+        {
+            /*Size*/
+                width: 12vw;
+                height: 6.5vh;
 
-                /*Size*/
-                    width: 4vw;
-                    height: 5.5vw;
+            /*Border*/
+                border-radius: 3vw;
+                border-right: 0.25vw solid black;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+                
+        }
 
-                /*Position*/
-                    position: absolute;
-                    right: 2vh;
-                    top: -2vh;
-            }
-            .d-fitaVermelha-login::after
-            {
-                /*Content*/
-                    content: "";
+    /*Icone*/
+        .d-labelIcon-login img
+        {
+            /*Size*/
+                width: 6.5vw;
 
-                /*Position*/
-                    position: absolute;
-                    left: 0;
-                    bottom: -1px;
+            /*Position*/
+                position: relative;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+        }
 
-                /*Size*/
-                    width: 0;
-                    height: 0;
+    /*Div Input*/
 
-                /*Border*/
-                    border-bottom: 2vw solid #F3F3F3;
-                    border-left: 2vw solid transparent;
-                    border-right: 2vw solid transparent;
-            }
+    /*Input*/
+        .d-campo-login input
+        {
+            /*Size*/
+                width: 100%;
+                height: 6.5vh;
 
-        /*Titulo*/
-            #loginUser h1
-            {
-                /*Text*/
-                    text-align: center;
-                    font-size: 2.5vw;
-                    padding-top: 8vh;
-            }
+            /*Background*/
+                background-color: #EEF0F1;
 
-        /*Div principal*/
-            .d-input-login
-            {
-                /*Border*/
-                    border-width: 0.15vw;
-                    border-style: solid;
-                    border-color: black;
-                    border-radius: 0.6vw;
+            /*Text*/
+                font-size: 2.5vh;
 
-                /*Position*/
-                    width: 26vw;
-                    height: 4vw;
-                    margin-top: 5vh;
+            /*Padding*/
+                padding-left: 2vw;
+                padding-right: 2vw;
+                padding-top: 2vh;
+                padding-bottom: 2vh; 
+        }
 
-                /*Position*/
-                    display: flex;
-                    align-items: flex-start;
-                    position: relative;
-                    left: 50%;
-                    transform: translateX(-50%);
+    /*Mensagem cadastro (p)*/
+        #loginUser p
+        {
+            /*Text*/
+                font-size: 1.8vh;
 
-                    
-                /*Background*/
-                    background-color: #EEF0F1;
-            }
+            /*Position*/
+                margin-top: 4vh;
+        }
+        #loginUser a
+        {
+            /*Text*/
+                font-size: 1.8vh;
 
-        /*Div Icone*/
-            .d-labelIcon-login
-            {
-                /*Size*/
-                    width: 5vw;
-                    height: 3.7vw;
+        }
 
-                /*Border*/
-                    border-radius: 0.6vw;
-                    border-right: 0.15vw solid black;
-                    border-top-right-radius: 0;
-                    border-bottom-right-radius: 0;
+    /*Botão*/
+        #loginUser button
+        {
+            /*Text*/
+                font-size: 2.5vh;
 
-                /*Background*/
-                    background-color: #D9D9D9;
-                    
-            }
+            /*Border*/
+                border-width: 0.8vw;
+                border-style: solid;
+                border-color: #F1C247;
+                border-radius: 5vw;
 
-        /*Icone*/
-            .d-labelIcon-login img
-            {
-                /*Size*/
-                    width: 2vw;
+            /*Padding*/
+                padding-left: 14vw;
+                padding-right: 14vw;
+                padding-top: 2vh;
+                padding-bottom: 2vh;
 
-                /*Position*/
-                    position: relative;
-                    left: 50%;
-                    top: 50%;
-                    transform: translate(-50%, -50%);
-            }
-
-        /*Div Input*/
-
-        /*Input*/
-            .d-campo-login input
-            {
-                /*Size*/
-                    width: 22vw;
-                    height: 3.5vw;
-
-                /*Background*/
-                    background-color: #EEF0F1;
-
-                /*Text*/
-                    font-size: 1.5vw;
-
-                /*Padding*/
-                    padding-left: 1vw;
-                    padding-right: 1vw;
-                    padding-top: 1vh;
-                    padding-bottom: 1vh; 
-
-                 /*Border*/
-                    border-radius: 0.6vw;
-                    border-top-left-radius: 0;
-                    border-bottom-left-radius: 0;
-            }
-
-        /*Mensagem cadastro (p)*/
-            #loginUser p
-            {
-                /*Text*/
-                    text-align: center;
-                    font-size: 1.15vw;
-                    font-family: "Nova Square", sans-serif;
-
-                /*Position*/
-                    margin-top: 2vh;
-            }
-            #loginUser a
-            {
-                /*Text*/
-                    text-align: center;
-                    font-size: 1.15vw;
-                    font-family: "Nova Square", sans-serif;
-                    text-decoration: underline;
-
-                /*Position*/
-                    margin-top: 2vh;
-
-            }
-        
-        /*Botão*/
-            #loginUser button
-            {
-                /*Background*/
-                    background-color: #2E536B;
-
-                /*Text*/
-                    text-align: center;
-                    font-size: 2vw;
-                    font-family: "Nova Square", sans-serif;
-                    color: white;
-
-                /*Border*/
-                    border-width: 0.2vw;
-                    border-style: solid;
-                    border-color: #F1C247;
-                    border-radius: 2vw;
-
-                /*Padding*/
-                    padding-left: 7vw;
-                    padding-right: 7vw;
-                    padding-top: 2vh;
-                    padding-bottom: 2vh;
-
-                /*Position*/
-                    position: relative;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    margin-top: 5vh;
-                    margin-bottom: 5vh;
-
-                }
-    /*Fim da parte direita*/
-
-    @media screen and (orientation: portrait) 
-    {
-        /*Grid da Pagina*/
-            .d-grid-login
-            {
-                /*Position*/
-                    display: block;
-            }
-
-        /*Parte esqueda*/
-            #d-imgHotelExt-login
-            {
-                display: none;
-            }
-
-        /*Parte Direita - Formulario*/
-
-        /*Coluna Principal*/
-            .d-colFormulario-login
-            {
-                background-color: #2D627D;
-                height: fit-content;
-            }
-        
-        /*Formulario - Parte branca*/
-            #loginUser
-            {      
-                /*Position*/
-                    position: relative;
-                    margin-left: 2vw;
-                    margin-right: 2vw;
-                    margin-top: 4vh;
-                    margin-bottom: 4vh;
-
-                /*Border*/
-                    border-width: 0.5vw;
-                    border-style: solid;
-                    border-color: #F2B208;
-                    border-radius: 1vw;
-            }
-
-        /*Fita Vermelha*/
-            .d-fitaVermelha-login
-            {
-
-                /*Size*/
-                    width: 8vw;
-                    height: 11vw;
-
-            }
-            .d-fitaVermelha-login::after
-            {
-                content: "";
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                width: 0;
-                height: 0;
-                border-bottom: 4vw solid #F3F3F3;
-                border-left: 4vw solid transparent;
-                border-right: 4vw solid transparent;
-            }
-
-        /*Titulo*/
-            #loginUser h1
-            {
-                /*Text*/
-                    font-size: 3vh;
-                    padding-top: 4vh;
-            }
-
-        /*Div principal*/
-            .d-input-login
-            {
-                /*Border*/
-                    border-width: 0.25vw;
-                    border-style: solid;
-                    border-color: black;
-                    border-radius: 3vw;
-
-                /*Position*/
-                    width: 90%;
-                    height: 7vh;
-                    margin-top: 5vh;
+            /*Position*/
+                margin-top: 7vh;
+                margin-bottom: 7vh;
 
             }
 
-        /*Div Icone*/
-            .d-labelIcon-login
-            {
-                /*Size*/
-                    width: 12vw;
-                    height: 6.5vh;
-
-                /*Border*/
-                    border-radius: 3vw;
-                    border-right: 0.25vw solid black;
-                    border-top-right-radius: 0;
-                    border-bottom-right-radius: 0;
-                    
-            }
-
-        /*Icone*/
-            .d-labelIcon-login img
-            {
-                /*Size*/
-                    width: 6.5vw;
-
-                /*Position*/
-                    position: relative;
-                    left: 50%;
-                    top: 50%;
-                    transform: translate(-50%, -50%);
-            }
-
-        /*Div Input*/
-
-        /*Input*/
-            .d-campo-login input
-            {
-                /*Size*/
-                    width: 100%;
-                    height: 6.5vh;
-
-                /*Background*/
-                    background-color: #EEF0F1;
-
-                /*Text*/
-                    font-size: 2.5vh;
-
-                /*Padding*/
-                    padding-left: 2vw;
-                    padding-right: 2vw;
-                    padding-top: 2vh;
-                    padding-bottom: 2vh; 
-            }
-
-        /*Mensagem cadastro (p)*/
-            #loginUser p
-            {
-                /*Text*/
-                    font-size: 1.8vh;
-
-                /*Position*/
-                    margin-top: 4vh;
-            }
-            #loginUser a
-            {
-                /*Text*/
-                    font-size: 1.8vh;
-
-            }
-
-        /*Botão*/
-            #loginUser button
-            {
-                /*Text*/
-                    font-size: 2.5vh;
-
-                /*Border*/
-                    border-width: 0.8vw;
-                    border-style: solid;
-                    border-color: #F1C247;
-                    border-radius: 5vw;
-
-                /*Padding*/
-                    padding-left: 14vw;
-                    padding-right: 14vw;
-                    padding-top: 2vh;
-                    padding-bottom: 2vh;
-
-                /*Position*/
-                    margin-top: 7vh;
-                    margin-bottom: 7vh;
-
-                }
-
-    }
+}

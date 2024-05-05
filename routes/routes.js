@@ -12,7 +12,9 @@
     // Home
         app.get("/", function(req, res)
         {
-            res.render("index");
+            res.render("index", {
+                Usuario: req.user
+            });
         })
 
     // Rotas do Bot
@@ -158,15 +160,15 @@
     // Rota de Login
     app.post('/usuario/login', passport.authenticate('local', {
         successRedirect: '/usuario/minha_conta',
-        failureRedirect: '/usuario/entrar',
+        failureRedirect: '/login',
         failureFlash: true
     }));
 
     // Minha conta
     app.get('/usuario/minha_conta', checkNotAuthenticated, (req, res) => {
         if (req.isAuthenticated()) {
-            const { Nome, Email } = req.user;
-            res.render('minhacontaTeste', { Cliente: { Nome, Email } });
+            const { Nome, Email, Senha } = req.user;
+            res.render('minhaConta', { Cliente: { Nome, Email, Senha} });
         } else {
             res.redirect('/login');
         }
@@ -189,6 +191,58 @@
         });
     
     });
+
+    app.post('/usuario/alterar', async (req, res) =>{
+
+        // Pega a senha antiga do corpo
+        const SenhaAntiga = req.body.senha_atual_user;
+
+        // Procurar o cliente no banco de acordo com o e-mail
+        const Data = await Cliente.findOne({
+            where: {
+                'Email': req.body.Email
+            }
+        })
+
+        // Verificar a equivalência das senhas
+        const isMatch = await bcrypt.compare(SenhaAntiga, Data.Senha);
+
+        // Se for igual
+        if (isMatch){
+            
+            // Pegar a senha nova do corpo
+            const SenhaNova = req.body.senha_user
+
+            // Realizar a criptografia da senha nova
+            let hashSenha = await bcrypt.hash(SenhaNova, 10);
+
+            // Realiza a atualização de dados
+            Cliente.update({
+                Nome: req.body.nome_user,
+                Email: req.body.Email,
+                Senha: hashSenha
+            },{
+                where: {
+                    id: Data.id
+                }
+            })
+            .then(() => {
+                req.flash('success_msg', "Atualização realizada com sucesso!")
+                res.redirect('/login')
+            
+            })
+            .catch((error) => {
+                console.log(error)
+            })
+
+        }
+        // Se a senha for diferente
+        else{
+            req.flash('error_msg', "As senhas não conferem!")
+            res.redirect('/usuario/minha_conta');
+        }
+
+    })
     
     // Verificação de Autenticação
     function checkNotAuthenticated(req, res, next){
