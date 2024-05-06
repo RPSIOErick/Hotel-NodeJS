@@ -88,10 +88,11 @@
                                 
                                 {{!-- Preço Total --}}
                                 
-                                <p> Total: R$3.500,00 </p>
+                                <p id="preco"></p>
 
                                 {{!-- Valor da Reserva --}}
-                                <input type="hidden" name="Valor" value="3.500">
+                                <input type="hidden" name="valorDia" value="500" id="valorDia">
+                                <input type="hidden" name="Valor" value="0" id="valor">
 
                                 {{!-- Botão de Confirmação --}}
                                 <button type="submit" id="ConfirmarBtn" class="border-2 p-4 mt-3 rounded-full"> Confirmar Reserva </button>
@@ -103,6 +104,8 @@
 
     </div>
 
+    <script src="../js/changePrice.js"></script>
+    
     <script>
         
         // Formatador do Input Data
